@@ -1,16 +1,16 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>INFS7901 Project MDPS</title>
+<title>INFS7901 Course List</title>
 </head>
 <body>
 
-    <h1>INFS7901 Project MDPS</h1>
+    <h1>INFS7901 - Course List</h1>
 
     <?php 
         // SETUP PHP CONNECTION
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "d74dbdad52b2dfe8";
         $dbname = "project_hospital";
         
         $conn = new mysqli($servername, $username, $password, $dbname);
