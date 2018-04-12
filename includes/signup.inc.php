@@ -12,17 +12,18 @@
         }
         
 
-$hos_name=$_POST['hos_name'];
+
 $pat_name=$_POST['pat_name'];
 $age=$_POST['age'];
 $gender=$_POST['gender'];
 $address=$_POST['address'];
 $visit_date=$_POST['visit_date'];
-
+$symptom=$_POST['symptom'];
+$T=$_POST['T'];
+$dur_in_hos=$_POST['dur_in_hos'];
 
 //Command to insert into table
-$query = "INSERT INTO patient_1 values('$hos_name','$pat_name','$age','$gender','$address','$visit_date')";
- 
+$query = "INSERT INTO patient_1 values((SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date'); INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES((SELECT hos_name FROM hospital),'symptom','T','dur_in_hos')";
 //run the query to insert the person. 
 $result = mysqli_query($conn, $query); 
 

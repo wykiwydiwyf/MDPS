@@ -4,8 +4,9 @@
 </head>
 <body>
 
-    <h1>Information for all surgeries</h1>
-
+  <h1>INFS7901 Project</h1>
+  <br>
+  <h1>Medical Database Processing System(MEPS)</h1>
     <?php 
         // SETUP PHP CONNECTION
         $servername = "localhost";
@@ -22,7 +23,7 @@
 
   <?php
   
-  echo "<h5>MYSQL CODE1</h5>";
+  echo "<h5>MYSQL Query1 :Information for all surgeries </h5>";
   echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment<br>";
   echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p<br>";
   echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1<br>";
@@ -64,10 +65,14 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
         </tbody>
     </table>
 
+  <?php
+  
+  echo "<h5>MYSQL Insertion1</h5>";
+  <br>
+  echo "<h5>Insert New Patient Information</h5>";
 
+    ?>
   <form action="includes/signup.inc.php" method="POST">
-    <input type="text" name="hos_name" placeholder="Hospital name">
-    <br>
     <input type="text" name="pat_name" placeholder="Patient's Name">
     <br>
     <input type="text" name="age" placeholder="Age">
@@ -77,6 +82,12 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
     <input type="text" name="address" placeholder="Address">
     <br>
     <input type="text" name="visit_date" placeholder="Visit Date">
+    <br>
+    <input type="text" name="symptom" placeholder="Symptom">
+    <br>
+    <input type="text" name="T" placeholder="If Inpatient(1 for yes,0 for no)">
+    <br>
+    <input type="text" name="dur_in_hos" placeholder="Duration of Day Stay in Hospital">
     <br>
       <button type="submit" name="submit">Sign up</button>
   </form>
