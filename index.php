@@ -4,9 +4,8 @@
 </head>
 <body>
 
-  <h1>INFS7901 Project</h1>
-  <br>
-  <h1>Medical Database Processing System(MEPS)</h1>
+  <h1>INFS7901 Project<br>Medical Database Processing System(MEPS)</h1>
+
     <?php 
         // SETUP PHP CONNECTION
         $servername = "localhost";
