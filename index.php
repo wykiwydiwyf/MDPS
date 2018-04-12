@@ -32,12 +32,10 @@
             </tr>
         </thead>
         <tbody id="queryTable1">
-            <?php
-                    if(isset($_POST["submit"])) {
-                    $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment
-from doctor as d, pat_doc_2 as pd2 ,patient_1 as p
-where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id 
-and pd2.if_surge = 1";
+          <?php
+                // FILL TABLE WITH DATA ON CLICK
+                if(isset($_POST["submit"])) {
+                    $query = "p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
                     $result = mysqli_query($conn, $query);
                     // put all our results into a html table
                     while ($rows = mysqli_fetch_array($result)) {
@@ -49,7 +47,7 @@ and pd2.if_surge = 1";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "</tr>";
-                                        }
+                    }
                 }
             ?>
         </tbody>
