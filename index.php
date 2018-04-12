@@ -10,7 +10,7 @@
         // SETUP PHP CONNECTION
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "d74dbdad52b2dfe8";
         $dbname = "testdb";
         
         $conn = new mysqli($servername, $username, $password, $dbname);
