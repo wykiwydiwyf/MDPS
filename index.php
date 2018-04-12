@@ -28,8 +28,14 @@
   echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1<br>";
   echo str_repeat('&nbsp;', 5);
     ?>
+  <form action="" method="post">
+    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
+  </form>
 
-  if(isset($_POST["query1"]) && $_POST["query1"] != "") {
+
+    <tbody id="queryTable1">
+      <?php
+            if(isset($_POST["query1"]) && $_POST["query1"] != "") {
   <table class="table thead-light table-bordered">
     <thead>
       <tr>
@@ -41,13 +47,6 @@
         <th scope="col">Treatment</th>
       </tr>
     </thead>
-    <form action="" method="post">
-      <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
-    </form>
-    <tbody id="queryTable1">
-      <?php
-
-
                     $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
                     $result = mysqli_query($conn, $query);
                     
@@ -61,8 +60,9 @@
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "</tr>";
                     }
+            }
             ?>
-      }
+
     </tbody>
   </table>
 
