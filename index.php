@@ -4,7 +4,7 @@
 </head>
 <body>
 
-    <h1>INFS7901 Tables</h1>
+    <h1>Information for all surgeries</h1>
 
     <?php 
         // SETUP PHP CONNECTION
@@ -34,7 +34,6 @@
         <tbody id="queryTable1">
           <?php
                 // FILL TABLE WITH DATA ON CLICK
-                if(isset($_POST["submit"])) {
                     $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment
 from doctor as d, pat_doc_2 as pd2 ,patient_1 as p
 where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
@@ -50,15 +49,11 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "</tr>";
-                    }
                 }
             ?>
         </tbody>
     </table>
 
-    <form action="" method="post">
-        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Information for all surgeries" style="text-align:right;margin:10px" />
-    </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
