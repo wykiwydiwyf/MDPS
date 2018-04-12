@@ -20,7 +20,16 @@
         }
     ?>
 
-    <table class="table table-dark">
+  <?php
+  echo "MYSQL CODE<br>";
+  echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment";
+  echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p";
+  echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
+
+    ?>
+    
+  
+  <table class="table table-dark">
         <thead>
             <tr>
                 <th scope="col">Patient ID</th>
