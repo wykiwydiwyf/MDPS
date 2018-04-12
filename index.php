@@ -1,17 +1,18 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>INFS7901 Course List</title>
+<title>INFS7901 Project MDPS</title>
 </head>
 <body>
 
-    <h1>INFS7901 - Course List</h1>
+    <h1>INFS7901 Project MDPS</h1>
+    <h1>Information for All Surgeries</h1>
 
     <?php 
         // SETUP PHP CONNECTION
         $servername = "localhost";
         $username = "root";
-        $password = "";
-        $dbname = "testdb";
+        $password = "d74dbdad52b2dfe8";
+        $dbname = "project_hospital";
         
         $conn = new mysqli($servername, $username, $password, $dbname);
         
@@ -23,10 +24,12 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th scope="col">Student Number</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Phone</th>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Doctor ID</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Disease</th>
+                <th scope="col">Treatment</th>
             </tr>
         </thead>
         <tbody id="studentTable">
@@ -34,15 +37,19 @@
                 // FILL TABLE WITH DATA ON CLICK
                 if(isset($_POST["submit"])) {
                     // get all our student data
-                    $query = "SELECT * FROM testtable";
+                    $query = "SELECT p.pat_id,p.name,d.doc_id,d.name,pd2.disease,pd2.treatment
+                    from doctor as d, pat_doc_2 as pd2 ,patient_1 as p
+                    where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1;
                     $result = mysqli_query($conn, $query);
                     // put all our results into a html table
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
-                        echo "<td>".$rows["studentNum"]."</td>";
-                        echo "<td>".$rows["firstName"]."</td>";
-                        echo "<td>".$rows["lastName"]."</td>";
-                        echo "<td>".$rows["phone"]."</td>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["name"]."</td>";
+                        echo "<td>".$rows["disease"]."</td>";
+                        echo "<td>".$rows["treatment"]."</td>";
                         echo "</tr>";
                     }
                 }
