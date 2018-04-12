@@ -36,15 +36,17 @@
                 // FILL TABLE WITH DATA ON CLICK
                 if(isset($_POST["submit"])) {
                     // get all our student data
-                    $query = "SELECT * FROM testtable";
+                    $query = "p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1 ";
                     $result = mysqli_query($conn, $query);
                     // put all our results into a html table
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
-                        echo "<td>".$rows["studentNum"]."</td>";
-                        echo "<td>".$rows["firstName"]."</td>";
-                        echo "<td>".$rows["lastName"]."</td>";
-                        echo "<td>".$rows["phone"]."</td>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["pat_name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["disease"]."</td>";
+                        echo "<td>".$rows["treatment"]."</td>";
                         echo "</tr>";
                     }
                 }
