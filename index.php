@@ -33,6 +33,10 @@
         </thead>
         <tbody id="queryTable1">
           <?php
+          echo "MYSQL CODE"
+          echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment"
+          echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p"
+          echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1"
                 // FILL TABLE WITH DATA ON CLICK
                     $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment
 from doctor as d, pat_doc_2 as pd2 ,patient_1 as p
