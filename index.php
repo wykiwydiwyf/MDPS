@@ -65,9 +65,36 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
     </table>
 
 
+  <?php  
+  echo "<h5>MYSQL Insertion1</h5>";
+  echo "<h5>Insert New Patient Information</h5>";
+    ?>
   
   
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <form action="includes/signup.inc.php" method="POST">
+    <input type="text" name="pat_name" placeholder="Patient's Name">
+      <br>
+        <input type="text" name="age" placeholder="Age">
+          <br>
+            <input type="text" name="gender" placeholder="Gender">
+              <br>
+                <input type="text" name="address" placeholder="Address">
+                  <br>
+                    <input type="text" name="visit_date" placeholder="Visit Date">
+                      <br>
+                        <input type="text" name="symptom" placeholder="Symptom">
+                          <br>
+                            <input type="text" name="T" placeholder="If Inpatient(1 for yes,0 for no)">
+                              <br>
+                                <input type="text" name="dur_in_hos" placeholder="Duration of Day Stay in Hospital">
+                                  <br>
+                                    <button type="submit" name="submit">Sign up</button>
+                                  </form>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
