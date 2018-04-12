@@ -71,31 +71,40 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
     ?>
   
   
-  <form action="includes/signup.inc.php" method="POST">
-    <input type="text" name="pat_name" placeholder="Patient's Name">
-      <br>
-        <input type="text" name="age" placeholder="Age">
-          <br>
-            <input type="text" name="gender" placeholder="Gender">
-              <br>
-                <input type="text" name="address" placeholder="Address">
-                  <br>
-                    <input type="text" name="visit_date" placeholder="Visit Date">
-                      <br>
-                        <input type="text" name="symptom" placeholder="Symptom">
-                          <br>
-                            <input type="text" name="T" placeholder="If Inpatient(1 for yes,0 for no)">
-                              <br>
-                                <input type="text" name="dur_in_hos" placeholder="Duration of Day Stay in Hospital">
-                                  <br>
-                                    <button type="submit" name="submit">Sign up</button>
-                                  </form>
 
   
   <form action="includes/signup.inc.php" method="POST">
     <div class="form-group">
       <label for="form1">Patient's Name</label>
       <input type="text" class="form-control" id="form1" name="pat_name" placeholder="Patient's Name">
+    </div>
+    <div class="form-group">
+      <label for="form2">Age</label>
+      <input type="text" class="form-control" id="form2" name="age" placeholder="Age">
+    </div>
+    <div class="form-group">
+      <label for="form3">Gender</label>
+      <input type="text" class="form-control" id="form3" name="gender" placeholder="Gender">
+    </div>
+    <div class="form-group">
+      <label for="form4">Address</label>
+      <input type="text" class="form-control" id="form4" name="address" placeholder="Address">
+    </div>
+    <div class="form-group">
+      <label for="form5">Visit Date</label>
+      <input type="text" class="form-control" id="form5" name="visit_date" placeholder="Visit Date">
+    </div>
+    <div class="form-group">
+      <label for="form6">Symptom</label>
+      <input type="text" class="form-control" id="form6" name="symptom" placeholder="Symptom">
+    </div>
+    <div class="form-group">
+      <label for="form7">If Inpatient</label>
+      <input type="text" class="form-control" id="form7" name="T" placeholder="(1 for yes,0 for no)">
+    </div>
+    <div class="form-group">
+      <label for="form8">Duration of Day Stay in Hospital</label>
+      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Duration of Day Stay in Hospital">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
