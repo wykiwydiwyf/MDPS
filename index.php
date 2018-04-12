@@ -19,16 +19,16 @@
             die("<h3>Connection failed: ".$conn->connect_error."</h3>");
         }
     ?>
-  str_repeat('&nbsp;', 3);
+
   <?php
-  
+  str_repeat('&nbsp;', 3);
   echo "<h5>MYSQL Query1 :Information for all surgeries </h5>";
   echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment<br>";
   echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p<br>";
   echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1<br>";
-
-    ?>
   str_repeat('&nbsp;', 1);
+    ?>
+
 
   <table class="table thead-light table-bordered">
     <thead>
@@ -66,15 +66,17 @@
     </tbody>
   </table>
 
-  str_repeat('&nbsp;', 3);
+
 
   <?php  
+  str_repeat('&nbsp;', 3);
   echo "<h5>MYSQL Insertion1</h5>";
   echo "<h5>Insert New Patient Information</h5>";
+  str_repeat('&nbsp;', 1);
     ?>
 
 
-  str_repeat('&nbsp;', 1);
+
 
   <form action="includes/signup.inc.php" method="POST">
     <div class="form-group">
