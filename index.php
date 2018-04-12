@@ -41,6 +41,9 @@
                 <th scope="col">Treatment</th>
             </tr>
         </thead>
+    <form action="" method="post">
+      <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Get Data" style="text-align:right;margin:10px" />
+    </form>
         <tbody id="queryTable1">
           <?php
                 // FILL TABLE WITH DATA ON CLICK
@@ -63,6 +66,7 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
             ?>
         </tbody>
     </table>
+  
 
 
   <?php  
