@@ -76,7 +76,7 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
   <form action="includes/signup.inc.php" method="POST">
     <div class="form-group">
       <label for="form1">Patient's Name</label>
-      <input type="text" class="form-control" id="form1" name="pat_name" placeholder="Patient's Name">
+      <input type="text" class="form-control" id="form1" name="pat_name" placeholder="First Name   Last Name">
     </div>
     <div class="form-group">
       <label for="form2">Age</label>
@@ -88,11 +88,11 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
     </div>
     <div class="form-group">
       <label for="form4">Address</label>
-      <input type="text" class="form-control" id="form4" name="address" placeholder="Address">
+      <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
     </div>
     <div class="form-group">
       <label for="form5">Visit Date</label>
-      <input type="text" class="form-control" id="form5" name="visit_date" placeholder="Visit Date">
+      <input type="text" class="form-control" id="form5" name="visit_date" placeholder="Visit Date (xxxx-xx-xx)">
     </div>
     <div class="form-group">
       <label for="form6">Symptom</label>
@@ -104,7 +104,7 @@ where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1
     </div>
     <div class="form-group">
       <label for="form8">Duration of Day Stay in Hospital</label>
-      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Duration of Day Stay in Hospital">
+      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Null If Outpatient">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
