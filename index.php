@@ -1,10 +1,10 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>INFS7901 Course List</title>
+<title>INFS7901-Tables</title>
 </head>
 <body>
 
-    <h1>INFS7901 - Course List</h1>
+    <h1>INFS7901 Tables</h1>
 
     <?php 
         // SETUP PHP CONNECTION
@@ -31,7 +31,7 @@
                 <th scope="col">Treatment</th>
             </tr>
         </thead>
-        <tbody id="studentTable">
+        <tbody id="queryTable1">
             <?php
                 // FILL TABLE WITH DATA ON CLICK
                 if(isset($_POST["submit"])) {
@@ -55,7 +55,7 @@
     </table>
 
     <form action="" method="post">
-        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Get Data" style="text-align:right;margin:10px" />
+        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Information for all surgeries" style="text-align:right;margin:10px" />
     </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
