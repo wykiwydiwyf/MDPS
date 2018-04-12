@@ -23,10 +23,12 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th scope="col">Student Number</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Phone</th>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Doctor ID</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Disease</th>
+                <th scope="col">Treatment</th>
             </tr>
         </thead>
         <tbody id="studentTable">
