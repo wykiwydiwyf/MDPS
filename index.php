@@ -5,7 +5,6 @@
 <body>
 
     <h1>INFS7901 Project MDPS</h1>
-    <h1>Information for All Surgeries</h1>
 
     <?php 
         // SETUP PHP CONNECTION
@@ -58,7 +57,7 @@
     </table>
 
     <form action="" method="post">
-        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Get Data" style="text-align:right;margin:10px" />
+        <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Information for All Surgeries" style="text-align:right;margin:10px" />
     </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
