@@ -30,16 +30,16 @@ $dur_in_hos=$_POST['dur_in_hos'];
 
 
 
-$sql  = "INSERT INTO patient_1(pat_id,hos_name,pat_name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date')";
+$sql  = "INSERT INTO patient_1(pat_id,hos_name,pat_name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date');";
 $sql .= "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'symptom','T','dur_in_hos')";
 
 // Execute multi query
-if (mysqli_multi_query($con,$sql))
+if (mysqli_multi_query($conn,$sql))
 {
   do
     {
     // Store first result set
-    if ($result=mysqli_store_result($con)) {
+    if ($result=mysqli_store_result($conn)) {
       // Fetch one and one row
       while ($row=mysqli_fetch_row($result))
         {
@@ -49,11 +49,11 @@ if (mysqli_multi_query($con,$sql))
       mysqli_free_result($result);
       }
     }
-  while (mysqli_next_result($con));
+  while (mysqli_next_result($conn));
 }
 
 //let them know the person has been added. 
 echo "Data successfully inserted into the database table ... ";
 /* close connection */
-mysqli_close($con);
+mysqli_close($conn);
 ?>
