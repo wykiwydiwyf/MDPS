@@ -59,9 +59,6 @@ $result = mysqli_query($conn, $query);
            ?>
 
       </select>
-    </div>
-    <div class="form-group">
-      <label for="form2">Doctor ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
 $query = "SELECT *
@@ -79,7 +76,7 @@ $result = mysqli_query($conn, $query);
            ?>
 
       </select>
-    </div>
+
     <button type="submit" class="btn btn-primary">Assign</button>
   </form>
   <?php
