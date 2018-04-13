@@ -241,11 +241,11 @@ where pd1.pat_id= p1.pat_id))
 $result = mysqli_query($conn, $query);
 
             ?>
+        <option>
         <?php 
-while ($row = mysql_fetch_array($result))
-{
-    echo "<option value='".$row['doc_id']."'>'".$row['doc_id']."'</option>";
-}?>
+    echo $row['doc_id'];
+        ?>
+        </option>
       </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
