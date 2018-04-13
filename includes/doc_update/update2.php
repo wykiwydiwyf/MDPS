@@ -20,70 +20,8 @@
         }
     ?>
 
-  <?php
-  echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query3 - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
-  echo "SELECT *<br>
-from patient_1 as p1<br>
-Where exists<br>
-	(select doc_id<br>
-    from doctor as d<br>
-    where not exists<br>
-    (select pd1.doc_id<br>
-    from pat_doc_1 as pd1<br>
-where pd1.pat_id= p1.pat_id))
-<br>";
-  echo str_repeat('&nbsp;', 5);
-    ?>
-  <form action="" method="post">
-    <input type="submit" name="query3" class="btn btn-primary btn-lg" value="Run Query3" style="text-align:right;margin:10px" />
-  </form>
-  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
-    <thead>
-      <tr>
-        <th scope="col">Patient ID</th>
-        <th scope="col">Patient Name</th>
-        <th scope="col">Visit Date</th>
-        <th scope="col">AGE</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Address</th>
-        <th scope="col">Hospital Name</th>
-      </tr>
-    </thead>
 
-    <tbody id="queryTable3">
-      <?php
-            if(isset($_POST["query3"]) && $_POST["query3"] != "") {
 
-$query = "SELECT *
-from patient_1 as p1
-Where exists
-	(select doc_id
-    from doctor as d
-    where not exists
-    (select pd1.doc_id
-    from pat_doc_1 as pd1
-where pd1.pat_id= p1.pat_id))
-";
-                    $result = mysqli_query($conn, $query);
-                    
-                    while ($rows = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>".$rows["pat_id"]."</td>";
-                        echo "<td>".$rows["pat_name"]."</td>";
-                        echo "<td>".$rows["visit_date"]."</td>";
-                        echo "<td>".$rows["age"]."</td>";
-                        echo "<td>".$rows["gender"]."</td>";
-                        echo "<td>".$rows["address"]."</td>";
-                        echo "<td>".$rows["hos_name"]."</td>";
-                        echo "</tr>";
-                    }
-            }
-            ?>
-
-    </tbody>
-  </table>
-  
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
