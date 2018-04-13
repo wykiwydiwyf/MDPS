@@ -240,6 +240,19 @@ $query2 = "SELECT doc_id from doctor";
 
 
   <select name="categories">
+    <option value="Select School">Doctor ID</option>
+    <?php
+    while ($row = mysqli_fetch_array($result2)) {
+        echo "<option value='" . $row['path'] . "'>'" . $row['name'] . "'</option>";
+    }
+    ?>
+  </select>
+  
+  
+  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+    <div class="form-group">
+      <label for="form1">Patient ID</label>
+      <select class="custom-select" name="pat_id" id="form1">
         <?php 
 while ($row = mysql_fetch_array($result1))
 {
@@ -247,8 +260,21 @@ while ($row = mysql_fetch_array($result1))
 }
         ?>
       </select>
+    </div>
     
+    <div class="form-group">
+      <label for="form2">Doctor ID</label>
+      <select class="custom-select" name="doc_id" id="form2">
+        <?php 
 
+
+while ($row = mysql_fetch_array($result2))
+{
+    echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
+}
+?>
+      </select>
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   
