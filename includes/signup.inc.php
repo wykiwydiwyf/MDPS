@@ -1,17 +1,13 @@
 <?php 
-        // SETUP PHP CONNECTION
-        $servername = "localhost";
-        $username = "root";
-        $password = "d74dbdad52b2dfe8";
-        $dbname = "project_hospital";
-        
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        
-        if ($conn->connect_error) {
-            die("<h3>Connection failed: ".$conn->connect_error."</h3>");
-        }
-        
 
+        
+$mysqli = new mysqli("localhost", "root", "d74dbdad52b2dfe8", "project_hospital");
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 
 $pat_name=$_POST['pat_name'];
 $age=$_POST['age'];
@@ -30,20 +26,20 @@ $query  = "INSERT INTO patient_1(pat_id,hos_name,name,age,gender,address,visit_d
 $query .= "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'symptom','T','dur_in_hos')";
 
 /* execute multi query */
-if ($conn->multi_query($query)) {
+if ($mysqli->multi_query($query)) {
     do {
         /* store first result set */
-        if ($result = $conn->store_result()) {
+        if ($result = $mysqli->store_result()) {
             while ($row = $result->fetch_row()) {
                 printf("%s\n", $row[0]);
             }
             $result->free();
         }
         /* print divider */
-        if ($conn->more_results()) {
+        if ($mysqli->more_results()) {
             printf("-----------------\n");
         }
-    } while ($conn->next_result());
+    } while ($mysqli->next_result());
 }
 
 //let them know the person has been added. 
