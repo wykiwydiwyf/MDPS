@@ -242,13 +242,13 @@ $result = mysqli_query($conn, $query);
 
             ?>
         <option selected="">Choose...</option>
-        <option>
+        
           <?php 
           while ($rows = mysqli_fetch_array($result)) {
-          echo "$rows["pat_id"]";
+          echo <option>"<td>".$rows["pat_id"]."</td>"</option>;
           }
            ?>
-        </option>
+        
       </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
