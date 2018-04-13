@@ -242,7 +242,7 @@ $result = mysqli_query($conn, $query);
 
 while ($row = mysql_fetch_array($result))
 {
-    echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
+    echo "<option value='".$row['doc_id']."'>'".$row['doc_id']."'</option>";
 }
         ?>
       </select>
