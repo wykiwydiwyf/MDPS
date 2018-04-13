@@ -88,14 +88,12 @@
       <input type="text" class="form-control" id="form2" name="age" placeholder="Age">
     </div>
     <div class="form-group">
-      <label for="form3">Gender</label>
-      <input type="text" class="form-control" id="form3" name="gender" placeholder="Gender">
-    </div>
-    <select class="custom-select" id="GenderSelect01">
+    <select class="custom-select" name="gender" id="form3">
       <option selected="">Choose...</option>
       <option value="1">Male</option>
       <option value="2">Female</option>
     </select>
+    </div>
     <div class="form-group">
       <label for="form4">Address</label>
       <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
