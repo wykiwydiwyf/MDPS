@@ -240,10 +240,12 @@ $result = mysqli_query($conn, $query1);
     <div class="form-group">
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
+        <?php 
 while ($row = mysql_fetch_array($result))
 {
     echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
 }
+        ?>
       </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
