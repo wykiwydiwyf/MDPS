@@ -242,9 +242,7 @@ $result = mysqli_query($conn, $query);
 
             ?>
           <?php 
-          while ($rows = mysqli_fetch_array($result)) {
-          echo $rows["pat_id"]
-          }
+
            ?>
       </select>
     </div>
