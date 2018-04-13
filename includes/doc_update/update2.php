@@ -52,7 +52,7 @@ order by p.pat_id
                         echo "<td>".$rows["pat_id"]."</td>";
                         echo "<td>".$rows["pat_name"]."</td>";
                         echo "<td>".$rows["doc_id"]."</td>";
-                        echo "<td>".$rows["doctor_name"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
                         echo "</tr>";
             }
             ?>
