@@ -78,7 +78,7 @@
 
 
 
-  <form action="includes/signup.inc.php" method="POST" style="text-align:right;margin:200px" >
+  <form action="includes/signup.inc.php" method="POST" style="text-align:left;margin:1000px" >
     <div class="form-group">
       <label for="form1">Patient's Name</label>
       <input type="text" class="form-control" id="form1" name="pat_name" placeholder="First Name   Last Name">
