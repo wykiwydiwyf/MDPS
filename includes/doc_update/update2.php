@@ -63,9 +63,6 @@ order by p.pat_id
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
-  echo "SELECT *<br>
-from doctor
-<br>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
@@ -112,7 +109,7 @@ from doctor
         <?php
 $query = "SELECT pat_id
 from patient_1 as p1
-Where exists
+Where not exists
 	(select doc_id
     from doctor as d
     where not exists
