@@ -243,7 +243,8 @@ $result = mysqli_query($conn, $query);
             ?>
         <option>
         <?php 
-    echo $row['doc_id'];
+
+    echo $row['pat_id'];
         ?>
         </option>
       </select>
