@@ -23,16 +23,6 @@
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query3 - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
-  echo "SELECT *<br>
-from patient_1 as p1<br>
-Where exists<br>
-	(select doc_id<br>
-    from doctor as d<br>
-    where not exists<br>
-    (select pd1.doc_id<br>
-    from pat_doc_1 as pd1<br>
-where pd1.pat_id= p1.pat_id))
-<br>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
@@ -83,9 +73,6 @@ where pd1.pat_id= p1.pat_id))
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
-  echo "SELECT *<br>
-from doctor
-<br>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
