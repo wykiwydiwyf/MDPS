@@ -4,7 +4,7 @@
   </head>
 <body>
 
-  <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
+  <h1 style="text-primary;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
   <?php 
         // SETUP PHP CONNECTION
