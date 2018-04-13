@@ -221,8 +221,14 @@ from doctor
   </table>
 
 
+  <select>
+    <?php while($row1 = mysqli_fetch_array($result)):;?>
+    <option><?php echo $row1[1];?></option>
+    <?php endwhile;?>
+  </select>
   
-  <form action="" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+  
+  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
