@@ -220,7 +220,12 @@ from doctor
     </tbody>
   </table>
 
-
+  <?php
+  echo str_repeat('&nbsp;', 10);
+  echo "<h5>MYSQL Update1</h5>";
+  echo "<h5>Assign a doctor to un-assigned patient</h5>";
+  echo str_repeat('&nbsp;', 5);
+    ?>
   
   <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
@@ -251,7 +256,7 @@ $result = mysqli_query($conn, $query);
       </select>
     </div>
     <div class="form-group">
-      <label for="form1">Patient ID</label>
+      <label for="form2">Doctor ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
 $query = "SELECT *
