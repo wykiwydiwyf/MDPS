@@ -54,6 +54,8 @@ if (mysqli_multi_query($conn,$sql))
 
 //let them know the person has been added. 
 echo "Data successfully inserted into the database table ... ";
+echo $T;
+echo $dur_in_hos;
 /* close connection */
 mysqli_close($conn);
 ?>
