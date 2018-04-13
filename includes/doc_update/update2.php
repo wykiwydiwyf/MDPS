@@ -21,10 +21,52 @@
     ?>
 
 
+  <?php
+  echo str_repeat('&nbsp;', 10);
+  echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information</h5>";
+  echo str_repeat('&nbsp;', 5);
+    ?>
+
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
+    <thead>
+      <tr>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Visit Date</th>
+        <th scope="col">AGE</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Hospital Name</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable3">
+      <?php
+
+$query = "SELECT *
+from patient_1
+";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["pat_name"]."</td>";
+                        echo "<td>".$rows["visit_date"]."</td>";
+                        echo "<td>".$rows["age"]."</td>";
+                        echo "<td>".$rows["gender"]."</td>";
+                        echo "<td>".$rows["address"]."</td>";
+                        echo "<td>".$rows["hos_name"]."</td>";
+                        echo "</tr>";
+            }
+            ?>
+
+    </tbody>
+  </table>
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
+  echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
   echo "SELECT *<br>
 from doctor
 <br>";
@@ -66,8 +108,8 @@ from doctor
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Update1</h5>";
-  echo "<h5>Assign a doctor to un-assigned patient</h5>";
+  echo "<h5>MYSQL Update2</h5>";
+  echo "<h5>Assign a doctor to any patient</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
   
@@ -76,15 +118,8 @@ from doctor
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
-$query = "SELECT pat_id
-from patient_1 as p1
-Where exists
-	(select doc_id
-    from doctor as d
-    where not exists
-    (select pd1.doc_id
-    from pat_doc_1 as pd1
-where pd1.pat_id= p1.pat_id))
+$query = "SELECT *
+from patient_1
 ";
 
 $result = mysqli_query($conn, $query);

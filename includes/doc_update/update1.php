@@ -22,7 +22,7 @@
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query3 - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
+  echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
@@ -72,7 +72,7 @@ where pd1.pat_id= p1.pat_id))
   
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
+  echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
