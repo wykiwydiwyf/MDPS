@@ -26,20 +26,25 @@ $dur_in_hos=$_POST['dur_in_hos'];
 
 
 
-$sql = "INSERT INTO patient_1(pat_id,hos_name,name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date');";
-$sql.= "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'symptom','T','dur_in_hos');";
+$query  = "INSERT INTO patient_1(pat_id,hos_name,name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date');";
+$query .= "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'symptom','T','dur_in_hos')";
 
-if (!$mysqli->multi_query($sql)) {
-    echo "Multi query failed: (" . $mysqli->errno . ") " . $mysqli->error;
+/* execute multi query */
+if ($conn->multi_query($query)) {
+    do {
+        /* store first result set */
+        if ($result = $conn->store_result()) {
+            while ($row = $result->fetch_row()) {
+                printf("%s\n", $row[0]);
+            }
+            $result->free();
+        }
+        /* print divider */
+        if ($conn->more_results()) {
+            printf("-----------------\n");
+        }
+    } while ($conn->next_result());
 }
-
-do {
-    if ($res = $mysqli->store_result()) {
-        var_dump($res->fetch_all(MYSQLI_ASSOC));
-        $res->free();
-    }
-} while ($mysqli->more_results() && $mysqli->next_result());
-
 
 //let them know the person has been added. 
 echo "Data successfully inserted into the database table ... ";
