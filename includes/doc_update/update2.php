@@ -23,7 +23,7 @@
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Update2</h5>";
-  echo "<h5>Assign a doctor to any patient</h5>";
+  echo "<h5>Assign a doctor to assigned patient</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
