@@ -35,9 +35,7 @@ where pd1.pat_id= p1.pat_id))
 <br>";
   echo str_repeat('&nbsp;', 5);
     ?>
-  <form action="" method="post">
-    <input type="submit" name="query3" class="btn btn-primary btn-lg" value="Run Query3" style="text-align:right;margin:10px" />
-  </form>
+
   <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
@@ -53,7 +51,6 @@ where pd1.pat_id= p1.pat_id))
 
     <tbody id="queryTable3">
       <?php
-            if(isset($_POST["query3"]) && $_POST["query3"] != "") {
 
 $query = "SELECT *
 from patient_1 as p1
@@ -77,7 +74,6 @@ where pd1.pat_id= p1.pat_id))
                         echo "<td>".$rows["address"]."</td>";
                         echo "<td>".$rows["hos_name"]."</td>";
                         echo "</tr>";
-                    }
             }
             ?>
 
@@ -92,9 +88,7 @@ from doctor
 <br>";
   echo str_repeat('&nbsp;', 5);
     ?>
-  <form action="" method="post">
-    <input type="submit" name="query4" class="btn btn-primary btn-lg" value="Run Query4" style="text-align:right;margin:10px" />
-  </form>
+
   <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
@@ -106,7 +100,6 @@ from doctor
 
     <tbody id="queryTable4">
       <?php
-            if(isset($_POST["query4"]) && $_POST["query4"] != "") {
 
 $query = "SELECT *
 from doctor
@@ -119,7 +112,6 @@ from doctor
                         echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["age"]."</td>";
                         echo "</tr>";
-                    }
             }
             ?>
 
