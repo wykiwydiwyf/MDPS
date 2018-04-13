@@ -232,10 +232,9 @@ Where exists
     from pat_doc_1 as pd1
 where pd1.pat_id= p1.pat_id))
 ";
-$query2 = "SELECT doc_id from doctor";
+
 
                     $result1 = mysqli_query($conn, $query1);
-                    $result2 = mysqli_query($conn, $query2);
   ?>
   
 
@@ -252,17 +251,6 @@ while ($row = mysql_fetch_array($result1))
       </select>
     </div>
     
-    <div class="form-group">
-      <label for="form2">Doctor ID</label>
-      <select class="custom-select" name="doc_id" id="form2">
-        <?php 
-while ($row = mysql_fetch_array($result2))
-{
-    echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
-}
-?>
-      </select>
-    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   
