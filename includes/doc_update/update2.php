@@ -68,6 +68,7 @@ from doctor
 <br>";
   echo str_repeat('&nbsp;', 5);
     ?>
+
   <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
@@ -79,7 +80,6 @@ from doctor
 
     <tbody id="queryTable4">
       <?php
-
 
 $query = "SELECT *
 from doctor
