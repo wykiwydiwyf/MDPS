@@ -110,7 +110,7 @@ from doctor
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
-$query = "$query = "SELECT pat_id
+$query = "SELECT pat_id
 from patient_1 as p1
 Where exists
 	(select doc_id
