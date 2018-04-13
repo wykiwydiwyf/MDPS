@@ -31,7 +31,7 @@
   <form action="" method="post">
     <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
   </form>
-  <table class="table thead-light table-bordered">
+  <table class="table thead-light table-bordered" style="margin:100px">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
@@ -66,7 +66,70 @@
     </tbody>
   </table>
 
+  <?php
+  echo str_repeat('&nbsp;', 10);
+  echo "SELECT *<br>
+FROM<br>
+(SELECT dep_name,COUNT(*)<br>
+FROM doc_dep<br>
+WHERE if_contract = 1<br>
+GROUP by dep_name) as tb1<br>
 
+INNER JOIN<br>
+
+(SELECT dep_name,COUNT(*)<br>
+FROM doc_dep<br>
+GROUP by dep_name) as tb2<br>
+on tb1.dep_name = tb2.dep_name<br>
+<br>";
+  echo str_repeat('&nbsp;', 5);
+    ?>
+  <form action="" method="post">
+    <input type="submit" name="query2" class="btn btn-primary btn-lg" value="Run Query2" style="text-align:right;margin:10px" />
+  </form>
+  <table class="table thead-light table-bordered" style="margin:100px">
+    <thead>
+      <tr>
+        <th scope="col">Department Name</th>
+        <th scope="col">Number of Doctor in Contract</th>
+        <th scope="col">Department Name</th>
+        <th scope="col">Number of Doctor</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable2">
+      <?php
+            if(isset($_POST["query2"]) && $_POST["query2"] != "") {
+
+                    $query = "SELECT *
+FROM
+(SELECT dep_name,COUNT(*)
+FROM doc_dep
+WHERE if_contract = 1
+GROUP by dep_name) as tb1
+
+INNER JOIN
+
+(SELECT dep_name,COUNT(*)
+FROM doc_dep
+GROUP by dep_name) as tb2
+on tb1.dep_name = tb2.dep_name
+";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["dep_name"]."</td>";
+                        echo "<td>".$rows["COUNT(*)"]."</td>";
+                        echo "<td>".$rows["dep_name"]."</td>";
+                        echo "<td>".$rows["COUNT(*)"]."</td>";
+                        echo "</tr>";
+                    }
+            }
+            ?>
+
+    </tbody>
+  </table>
 
   <?php  
   echo str_repeat('&nbsp;', 10);
@@ -96,7 +159,7 @@
     </select>
     </div>
     <div class="form-group">
-      <label for="form4">Address</label>
+      <label for="form4">Home Address</label>
       <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
     </div>
     <div class="form-group">
