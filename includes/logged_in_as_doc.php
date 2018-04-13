@@ -245,7 +245,7 @@ $result = mysqli_query($conn, $query);
         <option>
           <?php 
           while ($rows = mysqli_fetch_array($result)) {
-          echo $rows["pat_id]";
+          echo "<td>".$rows["doc_id"]."</td>";
           }
            ?>
         </option>
