@@ -222,7 +222,7 @@ from doctor
 
 
   <?php 
-$query1 = "SELECT pat_id
+$query = "SELECT pat_id
 from patient_1 as p1
 Where exists
 	(select doc_id
@@ -232,7 +232,7 @@ Where exists
     from pat_doc_1 as pd1
 where pd1.pat_id= p1.pat_id))
 ";
-$result = mysqli_query($conn, $query1);
+$result = mysqli_query($conn, $query);
   
         ?>
   
