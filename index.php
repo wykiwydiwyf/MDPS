@@ -10,6 +10,8 @@
     <input type="submit" class="btn btn-primary btn-lg" value="Log in as Doctor" style="text-align:right;margin:10px" />
   </form>
   
+  <button action="includes/logged_in_as_doc.php" type="button" class="btn btn-warning">Log in as Doctor</button>
+  
   <form action="includes/logged_in_as_pat.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
     <input type="submit" class="btn btn-primary btn-lg" value="Log in as Patient" style="text-align:right;margin:10px" />
   </form>
