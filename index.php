@@ -5,7 +5,10 @@
 <body>
 
   <h1 style="color:blue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
-
+  <form>
+    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
+    <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
+  </form>
   <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Doctor" style="text-align:center;margin:10px" />
   </form>

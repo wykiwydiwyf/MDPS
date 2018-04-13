@@ -22,6 +22,7 @@
 
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
+    <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
   
   <?php
