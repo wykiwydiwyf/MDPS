@@ -32,19 +32,18 @@
       <tr>
         <th scope="col">Patient ID</th>
         <th scope="col">Patient Name</th>
-        <th scope="col">Visit Date</th>
-        <th scope="col">AGE</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Address</th>
-        <th scope="col">Hospital Name</th>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
       </tr>
     </thead>
 
     <tbody id="queryTable3">
       <?php
 
-$query = "SELECT *
-from patient_1
+$query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name
+from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
+where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
+order by p.pat_id
 ";
                     $result = mysqli_query($conn, $query);
                     
@@ -52,11 +51,8 @@ from patient_1
                         echo "<tr>";
                         echo "<td>".$rows["pat_id"]."</td>";
                         echo "<td>".$rows["pat_name"]."</td>";
-                        echo "<td>".$rows["visit_date"]."</td>";
-                        echo "<td>".$rows["age"]."</td>";
-                        echo "<td>".$rows["gender"]."</td>";
-                        echo "<td>".$rows["address"]."</td>";
-                        echo "<td>".$rows["hos_name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doctor_name"]."</td>";
                         echo "</tr>";
             }
             ?>
