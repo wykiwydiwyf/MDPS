@@ -6,12 +6,12 @@
 
   <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
 
-  <form action="includes/logged_in_as_doc.php" method="post" style="margin-left:600px;margin-right:600px;margin-top:200px;margin-bottom:200px">
+  <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Doctor" style="text-align:right;margin:10px" />
   </form>
 
   
-  <form action="includes/logged_in_as_pat.php" method="post" style="margin-left:600px;margin-right:600px;margin-top:200px;margin-bottom:200px">
+  <form action="includes/logged_in_as_pat.php" method="post" style="margin:200px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Patient" style="text-align:right;margin:10px" />
   </form>
   
