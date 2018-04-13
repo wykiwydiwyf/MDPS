@@ -22,7 +22,7 @@
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query1 :Information for all surgeries </h5>";
+  echo "<h5>MYSQL Query1 - Join Query :Information for all surgeries </h5>";
   echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment<br>";
   echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p<br>";
   echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1<br>";
@@ -31,7 +31,7 @@
   <form action="" method="post">
     <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
   </form>
-  <table class="table thead-light table-bordered" style="margin:100px">
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:100px">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
@@ -68,32 +68,24 @@
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "SELECT *<br>
-FROM<br>
-(SELECT dep_name,COUNT(*)<br>
-FROM doc_dep<br>
-WHERE if_contract = 1<br>
-GROUP by dep_name) as tb1<br>
-
-INNER JOIN<br>
-
-(SELECT dep_name,COUNT(*)<br>
-FROM doc_dep<br>
-GROUP by dep_name) as tb2<br>
-on tb1.dep_name = tb2.dep_name<br>
+  echo "<h5>MYSQL Query2 - Join Query :Show who is/are the doctors for all patients </h5>";
+  echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name<br>
+from doctor as d, pat_doc_1 as pd1 ,patient_1 as p<br>
+where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id<br>
+order by p.pat_id
 <br>";
   echo str_repeat('&nbsp;', 5);
     ?>
   <form action="" method="post">
     <input type="submit" name="query2" class="btn btn-primary btn-lg" value="Run Query2" style="text-align:right;margin:10px" />
   </form>
-  <table class="table thead-light table-bordered" style="margin:100px">
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:100px">
     <thead>
       <tr>
-        <th scope="col">Department Name</th>
-        <th scope="col">Number of Doctor in Contract</th>
-        <th scope="col">Department Name</th>
-        <th scope="col">Number of Doctor</th>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
       </tr>
     </thead>
 
@@ -101,28 +93,18 @@ on tb1.dep_name = tb2.dep_name<br>
       <?php
             if(isset($_POST["query2"]) && $_POST["query2"] != "") {
 
-                    $query = "SELECT *
-FROM
-(SELECT dep_name,COUNT(*)
-FROM doc_dep
-WHERE if_contract = 1
-GROUP by dep_name) as tb1
-
-INNER JOIN
-
-(SELECT dep_name,COUNT(*)
-FROM doc_dep
-GROUP by dep_name) as tb2
-on tb1.dep_name = tb2.dep_name
-";
+$query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name
+from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
+where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
+order by p.pat_id";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
-                        echo "<td>".$rows["dep_name"]."</td>";
-                        echo "<td>".$rows["COUNT(*)"]."</td>";
-                        echo "<td>".$rows["dep_name"]."</td>";
-                        echo "<td>".$rows["COUNT(*)"]."</td>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["pat_name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
                         echo "</tr>";
                     }
             }
