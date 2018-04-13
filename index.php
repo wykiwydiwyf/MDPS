@@ -7,13 +7,14 @@
   <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
 
   <form action="includes/logged_in_as_doc.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
-    <input type="submit" class="btn btn-primary btn-lg" value="Log in as Doctor" style="text-align:right;margin:10px" />
+    <input type="button" class="btn btn-warning" value="Log in as Doctor" style="text-align:right;margin:10px" />
   </form>
+  
   
   <button action="includes/logged_in_as_doc.php" type="button" class="btn btn-warning">Log in as Doctor</button>
   
   <form action="includes/logged_in_as_pat.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
-    <input type="submit" class="btn btn-primary btn-lg" value="Log in as Patient" style="text-align:right;margin:10px" />
+    <input type="button" class="btn btn-warning" value="Log in as Patient" style="text-align:right;margin:10px" />
   </form>
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
