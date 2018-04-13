@@ -242,11 +242,9 @@ $result = mysqli_query($conn, $query);
 
             ?>
         <option selected="">Choose...</option>
-        
           <?php 
           while ($rows = mysqli_fetch_array($result)) {
-          echo "<option value='".$row['pat_id']."'>'".$row['pat_id']."'</option>";
-
+          echo "<option value='".$row["pat_id"]."'>'".$row["pat_id"]."'</option>";
           }
            ?>
         
