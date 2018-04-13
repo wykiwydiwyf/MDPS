@@ -7,14 +7,14 @@
   <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
   
 
-  <form action="doc_query/queries" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
+  <form action="doc_query/queries.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
     <input type="submit" class="btn btn-primary btn-lg" value="Do Queries" style="text-align:right;margin:10px" />
   </form>
   
-  <form action="doc_update/update1" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
+  <form action="doc_update/update1.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
     <input type="submit" class="btn btn-primary btn-lg" value="Assign a doctor to un-assigned patient" style="text-align:right;margin:10px" />
   </form>
-  <form action="doc_update/update2" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
+  <form action="doc_update/update2.php" method="post" style="margin-left:600px;margin-right:600px;margin-up:200px;margin-bottom:200px">
     <input type="submit" class="btn btn-primary btn-lg" value="Assign a doctor to any patient" style="text-align:right;margin:10px" />
   </form>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
