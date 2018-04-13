@@ -241,9 +241,10 @@ where pd1.pat_id= p1.pat_id))
 $result = mysqli_query($conn, $query);
 
             ?>
+        <option selected="">Choose...</option>
           <?php 
           while ($rows = mysqli_fetch_array($result)) {
-          echo <option>"$rows["pat_id]"</option>
+          echo <option>"$rows["pat_id]"</option>;
           }
            ?>
       </select>
