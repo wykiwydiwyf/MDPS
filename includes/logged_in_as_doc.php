@@ -232,16 +232,14 @@ Where exists
     from pat_doc_1 as pd1
 where pd1.pat_id= p1.pat_id))
 ";
-
+$query2 = "SELECT doc_id from doctor";
 
                     $result1 = mysqli_query($conn, $query1);
+                    $result2 = mysqli_query($conn, $query2);
   ?>
-  
 
-  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
-    <div class="form-group">
-      <label for="form1">Patient ID</label>
-      <select class="custom-select" name="pat_id" id="form1">
+
+  <select name="categories">
         <?php 
 while ($row = mysql_fetch_array($result1))
 {
@@ -249,8 +247,8 @@ while ($row = mysql_fetch_array($result1))
 }
         ?>
       </select>
-    </div>
     
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   
