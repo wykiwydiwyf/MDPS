@@ -31,7 +31,7 @@
   <form action="" method="post">
     <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
   </form>
-  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:100px">
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
@@ -68,7 +68,7 @@
 
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query2 - Join Query :Show who is/are the doctors for all patients </h5>";
+  echo "<h5>MYSQL Query2 - Join Query :Show who is/are the doctors for each patients </h5>";
   echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name<br>
 from doctor as d, pat_doc_1 as pd1 ,patient_1 as p<br>
 where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id<br>
@@ -79,7 +79,7 @@ order by p.pat_id
   <form action="" method="post">
     <input type="submit" name="query2" class="btn btn-primary btn-lg" value="Run Query2" style="text-align:right;margin:10px" />
   </form>
-  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:100px">
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
