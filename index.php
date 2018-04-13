@@ -91,6 +91,11 @@
       <label for="form3">Gender</label>
       <input type="text" class="form-control" id="form3" name="gender" placeholder="Gender">
     </div>
+    <select class="custom-select" id="GenderSelect01">
+      <option selected="">Choose...</option>
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+    </select>
     <div class="form-group">
       <label for="form4">Address</label>
       <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
@@ -109,7 +114,7 @@
     </div>
     <div class="form-group">
       <label for="form8">Duration of Day Stay in Hospital</label>
-      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Null If Outpatient">
+      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Input NULL For Outpatient">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
