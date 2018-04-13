@@ -4,7 +4,7 @@
   </head>
 <body>
 
-  <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
+  <h1 style="color:blue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
   
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />

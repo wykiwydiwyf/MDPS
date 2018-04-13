@@ -3,8 +3,8 @@
     <title>INFS7901-Tables</title>
   </head>
 <body>
-
-  <h1 style="text-primary;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
+  
+  <h1 style="color:blue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
   <?php 
         // SETUP PHP CONNECTION
