@@ -88,6 +88,7 @@
       <input type="text" class="form-control" id="form2" name="age" placeholder="Age">
     </div>
     <div class="form-group">
+      <label for="form3">Gender</label>
     <select class="custom-select" name="gender" id="form3">
       <option selected="">Choose...</option>
       <option value="1">Male</option>
