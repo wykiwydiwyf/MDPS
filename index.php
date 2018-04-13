@@ -119,7 +119,7 @@
       <label for="form8">Duration of Day Stay in Hospital</label>
       <select class="custom-select" name="dur_in_hos" id="form8">
         <option selected="">Choose...</option>
-        <option value="Null">Outpatient</option>
+        <option value="NULL">Outpatient</option>
         <option value="1">1 day</option>
         <option value="2">2 day</option>
         <option value="3">3 day</option>
