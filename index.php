@@ -6,12 +6,12 @@
 
   <h1>INFS7901 Project: Medical Database Processing System(MEPS)</h1>
 
-  <form action="includes/logged_in_as_doc.php" method="post" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px">
-    <input type="submit" name="Log in as Doctor" class="btn btn-primary btn-lg" value="Run Query3" style="text-align:right;margin:10px" />
+  <form action="includes/logged_in_as_doc.php" method="post" style="margin:600px">
+    <input type="submit" class="btn btn-primary btn-lg" value="Log in as Doctor" style="text-align:right;margin:10px" />
   </form>
   
-  <form action="includes/logged_in_as_pat.php" method="post" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px">
-    <input type="submit" name="Log in as Patient" class="btn btn-primary btn-lg" value="Run Query3" style="text-align:right;margin:10px" />
+  <form action="includes/logged_in_as_pat.php" method="post" style="margin:600px">
+    <input type="submit" class="btn btn-primary btn-lg" value="Log in as Patient" style="text-align:right;margin:10px" />
   </form>
   
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
