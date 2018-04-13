@@ -91,8 +91,8 @@
       <label for="form3">Gender</label>
     <select class="custom-select" name="gender" id="form3">
       <option selected="">Choose...</option>
-      <option value="1">Male</option>
-      <option value="2">Female</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
     </select>
     </div>
     <div class="form-group">
@@ -108,12 +108,49 @@
       <input type="text" class="form-control" id="form6" name="symptom" placeholder="Symptom">
     </div>
     <div class="form-group">
-      <label for="form7">If Inpatient</label>
-      <input type="text" class="form-control" id="form7" name="T" placeholder="(1 for yes,0 for no)">
+      <label for="form7">Inpatient or Outpatient</label>
+      <select class="custom-select" name="T" id="form7">
+        <option selected="">Choose...</option>
+        <option value="1">Inpatient</option>
+        <option value="0">Outpatient</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="form8">Duration of Day Stay in Hospital</label>
-      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Input NULL For Outpatient">
+      <select class="custom-select" name="dur_in_hos" id="form8">
+        <option selected="">Choose...</option>
+        <option value="Null">Outpatient</option>
+        <option value="1">1 day</option>
+        <option value="2">2 day</option>
+        <option value="3">3 day</option>
+        <option value="4">4 day</option>
+        <option value="5">5 day</option>
+        <option value="6">6 day</option>
+        <option value="7">7 day</option>
+        <option value="8">8 day</option>
+        <option value="9">9 day</option>
+        <option value="10">10 day</option>
+        <option value="11">11 day</option>
+        <option value="12">12 day</option>
+        <option value="13">13 day</option>
+        <option value="14">14 day</option>
+        <option value="15">15 day</option>
+        <option value="16">16 day</option>
+        <option value="17">17 day</option>
+        <option value="18">18 day</option>
+        <option value="19">19 day</option>
+        <option value="20">20 day</option>
+        <option value="21">21 day</option>
+        <option value="22">22 day</option>
+        <option value="23">23 day</option>
+        <option value="24">24 day</option>
+        <option value="25">25 day</option>
+        <option value="26">26 day</option>
+        <option value="27">27 day</option>
+        <option value="28">28 day</option>
+        <option value="29">29 day</option>
+        <option value="30">30 day</option>
+      </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
