@@ -19,7 +19,9 @@
             die("<h3>Connection failed: ".$conn->connect_error."</h3>");
         }
     ?>
-
+  <form>
+    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
+  </form>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query1 - Join Query :Information for all surgeries </h5>";

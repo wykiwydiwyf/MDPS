@@ -116,7 +116,9 @@ order by p.pat_id
 
     </tbody>
   </table>
-
+  <form>
+    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
+  </form>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
