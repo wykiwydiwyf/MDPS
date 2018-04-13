@@ -244,7 +244,11 @@ $result = mysqli_query($conn, $query);
         <option>
         <?php 
 
-    echo $row['pat_id'];
+         while ($rows = mysqli_fetch_array($result)) {
+         echo "<tr>";
+         echo "<td>".$rows["pat_id"]."</td>";
+         echo "</tr>";
+                    }
         ?>
         </option>
       </select>
