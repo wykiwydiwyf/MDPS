@@ -250,6 +250,26 @@ $result = mysqli_query($conn, $query);
         
       </select>
     </div>
+    <div class="form-group">
+      <label for="form1">Patient ID</label>
+      <select class="custom-select" name="pat_id" id="form1">
+        <?php
+$query = "SELECT *
+from doctor
+";
+
+$result = mysqli_query($conn, $query);
+
+            ?>
+        <option selected="">Choose...</option>
+        <?php 
+          while ($rows = mysqli_fetch_array($result)) {
+          echo "<option value=".$row["doc_id"].">".$row["doc_id"]."</option>";
+          }
+           ?>
+
+      </select>
+    </div>
     <button type="submit" class="btn btn-primary">Assign</button>
   </form>
   
