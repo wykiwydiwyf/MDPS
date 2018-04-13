@@ -221,11 +221,7 @@ from doctor
   </table>
 
 
-  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
-    <div class="form-group">
-      <label for="form1">Patient ID</label>
-      <select class="custom-select" name="pat_id" id="form1">
-        <?php 
+  <?php 
 $query1 = "SELECT pat_id
 from patient_1 as p1
 Where exists
@@ -236,13 +232,23 @@ Where exists
     from pat_doc_1 as pd1
 where pd1.pat_id= p1.pat_id))
 ";
-                    $result = mysqli_query($conn, $query1);
+$query2 = "SELECT doc_id from doctor";
 
-while ($row = mysql_fetch_array($result))
+                    $result1 = mysqli_query($conn, $query1);
+                    $result2 = mysqli_query($conn, $query2);
+  ?>
+  
+
+  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+    <div class="form-group">
+      <label for="form1">Patient ID</label>
+      <select class="custom-select" name="pat_id" id="form1">
+        <?php 
+while ($row = mysql_fetch_array($result1))
 {
     echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
 }
-?>
+        ?>
       </select>
     </div>
     
@@ -250,10 +256,7 @@ while ($row = mysql_fetch_array($result))
       <label for="form2">Doctor ID</label>
       <select class="custom-select" name="doc_id" id="form2">
         <?php 
-$query2 = "SELECT doc_id from doctor";
-                    $result = mysqli_query($conn, $query2);
-
-while ($row = mysql_fetch_array($result))
+while ($row = mysql_fetch_array($result2))
 {
     echo "<option value='".$row['path']."'>'".$row['name']."'</option>";
 }
