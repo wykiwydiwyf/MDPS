@@ -23,9 +23,11 @@ $T=$_POST['T'];
 $dur_in_hos=$_POST['dur_in_hos'];
 
 //Command to insert into table
-$query = "INSERT INTO patient_1 values(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date')";
+$query1 = "INSERT INTO patient_1(pat_id,hos_name,name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date')";
+$query1 = "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'symptom','T','dur_in_hos')";
 //run the query to insert the person. 
-$result = mysqli_query($conn, $query); 
+$result1 = mysqli_query($conn, $query1); 
+$result2 = mysqli_query($conn, $query2); 
 
 //let them know the person has been added. 
 echo "Data successfully inserted into the database table ... ";
