@@ -19,26 +19,24 @@
             die("<h3>Connection failed: ".$conn->connect_error."</h3>");
         }
     ?>
-
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
   </form>
-  
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Update1</h5>";
-  echo "<h5>Assign a doctor to un-assigned patient</h5>";
+  echo "<h5>MYSQL Insert2</h5>";
+  echo "<h5>Assign a doctor to assigned patient</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
-  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+  <form action="insert.inc1.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
 $query = "SELECT pat_id
 from patient_1 as p1
-Where exists
+Where not exists
 	(select doc_id
     from doctor as d
     where not exists
@@ -81,9 +79,10 @@ $result = mysqli_query($conn, $query);
     </div>
     <button type="submit" class="btn btn-primary">Assign</button>
   </form>
+  
   <?php
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
+  echo "<h5>MYSQL Query - Division Query :Show who is/are the doctors for all patients</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
@@ -92,26 +91,18 @@ $result = mysqli_query($conn, $query);
       <tr>
         <th scope="col">Patient ID</th>
         <th scope="col">Patient Name</th>
-        <th scope="col">Visit Date</th>
-        <th scope="col">AGE</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Address</th>
-        <th scope="col">Hospital Name</th>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
       </tr>
     </thead>
 
     <tbody id="queryTable3">
       <?php
 
-$query = "SELECT *
-from patient_1 as p1
-Where exists
-	(select doc_id
-    from doctor as d
-    where not exists
-    (select pd1.doc_id
-    from pat_doc_1 as pd1
-where pd1.pat_id= p1.pat_id))
+$query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name
+from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
+where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
+order by p.pat_id
 ";
                     $result = mysqli_query($conn, $query);
                     
@@ -119,18 +110,17 @@ where pd1.pat_id= p1.pat_id))
                         echo "<tr>";
                         echo "<td>".$rows["pat_id"]."</td>";
                         echo "<td>".$rows["pat_name"]."</td>";
-                        echo "<td>".$rows["visit_date"]."</td>";
-                        echo "<td>".$rows["age"]."</td>";
-                        echo "<td>".$rows["gender"]."</td>";
-                        echo "<td>".$rows["address"]."</td>";
-                        echo "<td>".$rows["hos_name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
                         echo "</tr>";
             }
             ?>
 
     </tbody>
   </table>
-  
+  <form>
+    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
+  </form>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
