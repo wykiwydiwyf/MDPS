@@ -68,9 +68,6 @@ from doctor
 <br>";
   echo str_repeat('&nbsp;', 5);
     ?>
-  <form action="" method="post">
-    <input type="submit" name="query4" class="btn btn-primary btn-lg" value="Run Query4" style="text-align:right;margin:10px" />
-  </form>
   <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
@@ -82,7 +79,7 @@ from doctor
 
     <tbody id="queryTable4">
       <?php
-            if(isset($_POST["query4"]) && $_POST["query4"] != "") {
+
 
 $query = "SELECT *
 from doctor
@@ -95,7 +92,6 @@ from doctor
                         echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["age"]."</td>";
                         echo "</tr>";
-                    }
             }
             ?>
 
@@ -114,8 +110,15 @@ from doctor
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
-$query = "SELECT *
-from patient_1
+$query = "$query = "SELECT pat_id
+from patient_1 as p1
+Where exists
+	(select doc_id
+    from doctor as d
+    where not exists
+    (select pd1.doc_id
+    from pat_doc_1 as pd1
+where pd1.pat_id= p1.pat_id))
 ";
 
 $result = mysqli_query($conn, $query);
