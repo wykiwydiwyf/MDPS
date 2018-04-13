@@ -221,8 +221,12 @@ from doctor
   </table>
 
 
-  <tbody id="queryTable5">
-    <?php
+  
+  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+    <div class="form-group">
+      <label for="form1">Patient ID</label>
+      <select class="custom-select" name="pat_id" id="form1">
+        <?php
 $query = "SELECT pat_id
 from patient_1 as p1
 Where exists
@@ -237,20 +241,11 @@ where pd1.pat_id= p1.pat_id))
 $result = mysqli_query($conn, $query);
 
             ?>
-
-  </tbody>
-
-  
-  <form action="signup.inc2.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
-    <div class="form-group">
-      <label for="form1">Patient ID</label>
-      <select class="custom-select" name="pat_id" id="form1">
         <?php 
 while ($row = mysql_fetch_array($result))
 {
     echo "<option value='".$row['doc_id']."'>'".$row['doc_id']."'</option>";
-}
-        ?>
+}?>
       </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
