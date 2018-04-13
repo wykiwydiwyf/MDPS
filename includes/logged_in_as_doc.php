@@ -178,7 +178,49 @@ where pd1.pat_id= p1.pat_id))
     </tbody>
   </table>
 
+  <?php
+  echo str_repeat('&nbsp;', 10);
+  echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
+  echo "SELECT *<br>
+from doctor
+<br>";
+  echo str_repeat('&nbsp;', 5);
+    ?>
+  <form action="" method="post">
+    <input type="submit" name="query4" class="btn btn-primary btn-lg" value="Run Query4" style="text-align:right;margin:10px" />
+  </form>
+  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
+    <thead>
+      <tr>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">AGE</th>
+      </tr>
+    </thead>
 
+    <tbody id="queryTable3">
+      <?php
+            if(isset($_POST["query4"]) && $_POST["query4"] != "") {
+
+$query = "SELECT *
+from doctor
+";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["age"]."</td>";
+                        echo "</tr>";
+                    }
+            }
+            ?>
+
+    </tbody>
+  </table>
+  
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
