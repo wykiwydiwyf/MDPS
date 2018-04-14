@@ -143,10 +143,9 @@ Date<select name=dt >
 <option value='31'>31</option>
 </select>
 
-
 </td><td  align=left  >   
 Year(yyyy)<input type=text name=year size=4 value=2005>
-<input type=submit value=Submit>
+
 </table>
 
 </div>
