@@ -195,7 +195,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
 
               $sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
-              $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment')";
+              $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment');";
               
               // Execute multi query
               if (mysqli_multi_query($conn,$sql))
