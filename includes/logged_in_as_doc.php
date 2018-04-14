@@ -19,10 +19,10 @@
   <form action="doc_insert/insert1.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Add Diagnosis Result for New Patient" style="text-align:center;margin:10px" />
   </form>
-  <form action="doc_insert/insert2.php" method="post" style="margin:100px">
+  <form action="doc_update/update1.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Update Diagnosis Result for Existing Patient" style="text-align:center;margin:10px" />
   </form>
-  <form action="doc_insert/delete1.php" method="post" style="margin:100px">
+  <form action="doc_delete/delete1.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Delete Diagnosis Result for Existing Patient" style="text-align:center;margin:10px" />
   </form>
   </div>

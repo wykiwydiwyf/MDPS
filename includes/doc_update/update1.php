@@ -25,7 +25,7 @@
   </form>
   <?php
   echo str_repeat('&nbsp;', 100);
-  echo "<h5>MYSQL Insert2</h5>";
+  echo "<h5>MYSQL Update1</h5>";
 
     ?>
   <h7 style="color:red;text-align:left;">Select the Patients ID and Doctor ID to Update</h7>
