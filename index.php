@@ -3,42 +3,12 @@
     <title>INFS7901-Tables</title>
   </head>
 <body>
-
+<img src="https://d371ua0s3oj08z.cloudfront.net/styles/hero/hero.jpg?itok=CK1mVAzA" height="200">
 
   <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
-<?php 
-function imageResize($width, $height, $target) {
 
-//takes the larger size of the width and height and applies the
-formula accordingly...this is so this script will work
-dynamically with any size image
 
-if ($width > $height) {
-$percentage = ($target / $width);
-} else {
-$percentage = ($target / $height);
-}
-
-//gets the new value and applies the percentage, then rounds the value
-$width = round($width * $percentage);
-$height = round($height * $percentage);
-
-//returns the new sizes in html image tag format...this is so you
-can plug this function inside an image tag and just get the
-
-return "width="$width" height="$height"";
-
-}
-
-<?php 
-
-//get the image size of the picture and load it into an array
-$mysock = getimagesize("https://d371ua0s3oj08z.cloudfront.net/styles/hero/hero.jpg?itok=CK1mVAzA");
-
-?>
-<img src="https://d371ua0s3oj08z.cloudfront.net/styles/hero/hero.jpg?itok=CK1mVAzA" <?php imageResize($mysock[0],
-$mysock[1], 150); ?>>
 
   <form style="margin-buttom:200px">
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
