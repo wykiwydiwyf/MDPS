@@ -4,9 +4,11 @@
   </head>
 <body>
 
-  <h1 style="color:blue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
+  <h1 style="color:lightblue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
-  <div class="container-fluid">
+<img src="https://www.iaspaper.net/wp-content/uploads/2017/08/WBJEE-Medical.jpg" class="img-fluid" alt="Responsive image">
+
+  <div class="container-fluid" style="background-color:lightblue">
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
@@ -20,7 +22,11 @@
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Patient" style="text-align:center;margin:10px" />
   </form>
   </div>
-  
+
+
+  <img src="..." class="img-fluid" alt="Responsive image">
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
