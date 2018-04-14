@@ -45,7 +45,7 @@
         <th scope="col">Disease</th>
         <th scope="col">Treatment</th>
         <th scope="col">Visit Date</th>
-        <th scope="col">Symptom Date</th>
+        <th scope="col">Diagnosis Date</th>
       </tr>
     </thead>
 
@@ -62,7 +62,7 @@
                         echo "<tr>";
                         echo "<td>".$rows["pat_id"]."</td>";
                         echo "<td>".$rows["doc_id"]."</td>";
-                        echo "<td>".$rows["pat_name"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["T"]."</td>";
                         echo "<td>".$rows["dur_in_hos"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
