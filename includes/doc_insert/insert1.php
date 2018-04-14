@@ -172,7 +172,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   $query = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES($pat_id,$doc_id,$date)";
                       mysqli_query($conn, $query);
                         //let them know the person has been added. 
-  echo mysql_errno($link) . ": " . mysql_error($link) . "\n";
+  echo mysql_errno($link) . ": " . mysql_error($link) . ;
   echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
   echo str_repeat('&nbsp;', 100);
               }
