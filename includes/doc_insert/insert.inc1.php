@@ -19,14 +19,24 @@
 
 $doc_id=$_POST['doc_id'];
 $pat_id=$_POST['pat_id'];
+$todo=$_POST['todo'];
+$month=$_POST['month'];
+$dt=$_POST['dt'];
+$year=$_POST['year'];
+
+$date="$year-$month-$dt";
+
+
+}
 
 
 
 
 
 
-$sql  = "INSERT INTO patient_1(pat_id,hos_name,pat_name,age,gender,address,visit_date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_name','$age','$gender','$address','$visit_date');";
-$sql .= "INSERT INTO patient_2(pat_id,hos_name,symptom,dur_in_hos,T) VALUES(NULL,(SELECT hos_name FROM hospital),'$symptom','$dur_in_hos','$T')";
+
+$sql  = "INSERT INTO pat_doc(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
+
 
 // Execute multi query
 if (mysqli_multi_query($conn,$sql))
