@@ -30,7 +30,7 @@ $date="$year-$month-$dt";
 
 
 
-$sql  = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES(NULL,(SELECT hos_name FROM hospital),'$pat_id','$doc_id','$date');";
+$sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
 
 // Execute multi query
 if (mysqli_multi_query($conn,$sql))
@@ -50,6 +50,7 @@ if (mysqli_multi_query($conn,$sql))
     }
   while (mysqli_next_result($conn));
 }
+
 
 //let them know the person has been added. 
 echo "Data successfully inserted into the database table ... ";
