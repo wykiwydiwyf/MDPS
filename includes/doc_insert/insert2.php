@@ -177,8 +177,8 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-              $sql  = "UPDATE pat_doc_1(pat_id,doc_id,date) SET pat_id = '$pat_id' , doc_id = '$doc_id', date = '$date';";
-              $sql .= "UPDATE pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) SET pat_id = '$pat_id' , doc_id = '$doc_id', if_surge = '$if_surge', disease = '$disease', treatment = '$treatment';";
+              $sql  = "UPDATE pat_doc_1 SET pat_id = '$pat_id' , doc_id = '$doc_id', date = '$date';";
+              $sql .= "UPDATE pat_doc_2 SET pat_id = '$pat_id' , doc_id = '$doc_id', if_surge = '$if_surge', disease = '$disease', treatment = '$treatment';";
 
               
               // Execute multi query
