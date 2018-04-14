@@ -152,8 +152,8 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
 <div class="form-group">
       <label for="form3">Does Patient Need Undertake A Surgery?</label>
       <select class="custom-select" name="if_surge" id="form3">
-      <option value="0"</option>
-      <option value="1"</option>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
       </select>
 </div>
 <div class="form-group">
@@ -193,6 +193,28 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   echo str_repeat('&nbsp;', 100);
               }
 
+
+              $sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
+              $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment')";
+              
+              // Execute multi query
+              if (mysqli_multi_query($conn,$sql))
+              {
+                do
+                  {
+                  // Store first result set
+                  if ($result=mysqli_store_result($conn)) {
+                    // Fetch one and one row
+                    while ($row=mysqli_fetch_row($result))
+                      {
+                      printf("%s\n",$row[0]);
+                      }
+                    // Free result set
+                    mysqli_free_result($result);
+                    }
+                  }
+                while (mysqli_next_result($conn));
+              }
 ?>
 
 
