@@ -17,10 +17,10 @@
   </form>
   
   <form action="doc_insert/insert1.php" method="post" style="margin:100px">
-    <input type="submit" class="btn btn-warning btn-lg btn-block" value="Assign a doctor to un-assigned patient" style="text-align:center;margin:10px" />
+    <input type="submit" class="btn btn-warning btn-lg btn-block" value="Add Diagnosis Result for New Patient" style="text-align:center;margin:10px" />
   </form>
   <form action="doc_insert/insert2.php" method="post" style="margin:100px">
-    <input type="submit" class="btn btn-warning btn-lg btn-block" value="Assign a doctor to any patient" style="text-align:center;margin:10px" />
+    <input type="submit" class="btn btn-warning btn-lg btn-block" value="Update Diagnosis Result for Existing Patient" style="text-align:center;margin:10px" />
   </form>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
