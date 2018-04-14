@@ -138,8 +138,22 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
 </table>
 
 </div>
-
-     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Assign Doctor" style="text-align:right;margin:10px" />
+<div class="form-group">
+      <label for="form3">Does Patient Need Undertake A Surgery?</label>
+      <select class="custom-select" name="if_surge" id="form3">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      </select>
+</div>
+<div class="form-group">
+      <label for="form4">Diagnostic Result</label>
+      <input type="text" class="form-control" id="form4" name="disease" placeholder="Name of Disease Paitent has">
+</div>
+<div class="form-group">
+      <label for="form5">Treatment</label>
+      <input type="text" class="form-control" id="form5" name="treatment" placeholder="Treatment">
+</div>
+     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Add Diagnostic Result" style="text-align:right;margin:10px" />
   </form>
 
 <?php 
@@ -151,26 +165,46 @@ $todo=$_POST['todo'];
 $month=$_POST['month'];
 $dt=$_POST['dt'];
 $year=$_POST['year'];
-
+$if_surge=$_POST['if_surge'];
+$disease=$_POST['disease'];
+$treatment=$_POST['treatment'];
 $date="$year-$month-$dt";
 
 
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-  $query = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')";
-                      mysqli_query($conn, $query) or die(mysqli_error($conn));
-                        //let them know the person has been added. 
-  echo mysqli_errno($conn);
-  echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
-  echo str_repeat('&nbsp;', 100);
+              $sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
+              $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment');";
+              
+              // Execute multi query
+              if (mysqli_multi_query($conn,$sql))
+              {
+                do
+                  {
+                  // Store first result set
+                  if ($result=mysqli_store_result($conn)) {
+                    // Fetch one and one row
+                    while ($row=mysqli_fetch_row($result))
+                      {
+                      printf("%s\n",$row[0]);
+                      }
+                    // Free result set
+                    mysqli_free_result($result);
+                    }
+                  }
+                while (mysqli_next_result($conn));
               }
-
+                                      //let them know the person has been added. 
+                                      echo mysqli_errno($conn);
+                                      echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ... </span>";
+                                      echo str_repeat('&nbsp;', 100);
+            }
 ?>
 
 
   <?php
-  echo str_repeat('&nbsp;', 10);
+  echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Query - Division Query :Show who is/are the doctors for all patients</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
