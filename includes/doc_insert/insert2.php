@@ -156,7 +156,7 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
       <label for="form5">Treatment</label>
       <input type="text" class="form-control" id="form5" name="treatment" placeholder="Treatment">
 </div>
-     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Add Diagnostic Result" style="text-align:right;margin:10px" />
+     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Update Diagnostic Result" style="text-align:right;margin:10px" />
   </form>
 
 <?php 
@@ -177,8 +177,8 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-              $sql  = "UPDATE pat_doc_1(pat_id,doc_id,date) SET pat_id = '$pat_id' AND SET doc_id = '$doc_id'AND SET date = '$date';";
-              $sql .= "UPDATE pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) SET pat_id = '$pat_id' AND SET doc_id = '$doc_id'AND SET if_surge = '$if_surge'AND SET disease = '$disease'AND SET treatment = '$treatment';";
+              $sql  = "UPDATE pat_doc_1(pat_id,doc_id,date) SET pat_id = '$pat_id' , doc_id = '$doc_id', date = '$date';";
+              $sql .= "UPDATE pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) SET pat_id = '$pat_id' , doc_id = '$doc_id', if_surge = '$if_surge', disease = '$disease', treatment = '$treatment';";
 
               
               // Execute multi query
@@ -201,7 +201,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
               }
                                       //let them know the person has been added. 
                                       echo mysqli_errno($conn);
-                                      echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ... </span>";
+                                      echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully updated ... </span>";
                                       echo str_repeat('&nbsp;', 300);
             }
 ?>
@@ -219,8 +219,6 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
         <th scope="col">Patient Name</th>
         <th scope="col">Doctor ID</th>
         <th scope="col">Doctor Name</th>
-        <th scope="col">Inpatient(1)/Outpatient(0)</th>
-        <th scope="col">Duration of Day in Hospital</th>
         <th scope="col">Symptom</th>
         <th scope="col">Disease</th>
         <th scope="col">Treatment</th>
@@ -245,8 +243,6 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
                         echo "<td>".$rows["pat_name"]."</td>";
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
-                        echo "<td>".$rows["T"]."</td>";
-                        echo "<td>".$rows["dur_in_hos"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
