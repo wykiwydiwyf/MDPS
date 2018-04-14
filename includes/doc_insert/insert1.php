@@ -64,7 +64,7 @@ $result = mysqli_query($conn, $query);
     </div>
     <div class="form-group">
       <label for="form2">Doctor ID</label>
-      <select class="custom-select" name="pat_id" id="form1">
+      <select class="custom-select" name="doc_id" id="form1">
         <?php
 $query = "SELECT *
 from doctor
@@ -169,17 +169,19 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-  $sql = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES($pat_id,$doc_id,$date);";
+  $sql = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
   mysqli_query($conn, $sql);
+
+  //let them know the person has been added. 
+  echo "Data successfully inserted into the database table ... ";
 }
-//let them know the person has been added. 
-echo "Data successfully inserted into the database table ... $date";
+
 
 ?>
 
 
   <?php
-  echo str_repeat('&nbsp;', 10);
+  echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
