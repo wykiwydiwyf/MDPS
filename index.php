@@ -6,13 +6,15 @@
 
   <h1 style="color:lightblue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1VX1UzLfk9O4hCpE_EqHqlZssw11a2r6BWsTSdcvnniDRVbxOAg" height="200" class="img-fluid" alt="Responsive image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1VX1UzLfk9O4hCpE_EqHqlZssw11a2r6BWsTSdcvnniDRVbxOAg" class="img-fluid" alt="Responsive image">
 
-  <div class="container-fluid" style="background-color:lightblue">
-  <form>
+
+  <form style="margin-buttom:200px">
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
+
+  <div class="container-fluid" style="background-color:lightblue">
   <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Doctor" style="text-align:center;margin:10px" />
   </form>
