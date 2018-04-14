@@ -28,7 +28,7 @@
   echo "<h5>MYSQL Insert2</h5>";
 
     ?>
-  <h5 style="color:red;text-align:left;">Select the Patients ID and Doctor ID to Update</h1>
+  <h7 style="color:red;text-align:left;">Select the Patients ID and Doctor ID to Update</h7>
       <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
@@ -72,9 +72,7 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-    <?php 
-          echo "Enter The New Information Below";
-           ?>
+<h7 style="color:red;text-align:left;">Enter The New Information Below</h7>
     <div class="form-group">
     <label for="table1">Diagnosis Date</label>
     <table border="0" cellspacing="0" id="table1">
