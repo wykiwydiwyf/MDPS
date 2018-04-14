@@ -169,7 +169,7 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-  $query = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES($pat_id,$doc_id,$date)";
+  $query = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')";
                       mysqli_query($conn, $query) or die(mysqli_error($conn));
                         //let them know the person has been added. 
   echo mysqli_errno($conn);
