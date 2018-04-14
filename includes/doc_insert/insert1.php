@@ -152,6 +152,7 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
 <div class="form-group">
       <label for="form3">Does Patient Need Undertake A Surgery?</label>
       <select class="custom-select" name="if_surge" id="form3">
+      <option selected="">Choose...</option>
       <option value="0">No</option>
       <option value="1">Yes</option>
       </select>
