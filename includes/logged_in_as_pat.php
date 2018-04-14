@@ -4,78 +4,20 @@
   </head>
 <body>
   
-  <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
-
-  <?php 
-        // SETUP PHP CONNECTION
-        $servername = "localhost";
-        $username = "root";
-        $password = "d74dbdad52b2dfe8";
-        $dbname = "project_hospital";
-        
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        
-        if ($conn->connect_error) {
-            die("<h3>Connection failed: ".$conn->connect_error."</h3>");
-        }
-    ?>
-
+<h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
+  
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
-  <?php  
-  echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Insertion1</h5>";
-  echo "<h5>Insert New Patient Information</h5>";
-
-    ?>
 
 
-
-
-  <form action="signup.inc1.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
-    <div class="form-group">
-      <label for="form1">Patient's Name</label>
-      <input type="text" class="form-control" id="form1" name="pat_name" placeholder="First Name   Last Name">
-    </div>
-    <div class="form-group">
-      <label for="form2">Age</label>
-      <input type="text" class="form-control" id="form2" name="age" placeholder="Age">
-    </div>
-    <div class="form-group">
-      <label for="form3">Gender</label>
-      <select class="custom-select" name="gender" id="form3">
-        <option selected="">Choose...</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="form4">Home Address</label>
-      <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
-    </div>
-    <div class="form-group">
-      <label for="form5">Visit Date</label>
-      <input type="text" class="form-control" id="form5" name="visit_date" placeholder="Visit Date (xxxx-xx-xx)">
-    </div>
-    <div class="form-group">
-      <label for="form6">Symptom</label>
-      <input type="text" class="form-control" id="form6" name="symptom" placeholder="Symptom">
-    </div>
-    <div class="form-group">
-      <label for="form7">Inpatient or Outpatient</label>
-      <select class="custom-select" name="T" id="form7">
-        <option selected="">Choose...</option>
-        <option value="1">Inpatient</option>
-        <option value="0">Outpatient</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="form8">How Many Days You Expect to Stay in Hospital</label>
-      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Input NULL for Outpatient">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <form action="pat_query/queries.php" method="post" style="margin:100px">
+    <input type="submit" class="btn btn-warning btn-lg btn-block" value="Find Your Information with Patient ID" style="text-align:center;margin:10px" />
+  </form>
+  
+  <form action="pat_insert/insert1.php" method="post" style="margin:100px">
+    <input type="submit" class="btn btn-warning btn-lg btn-block" value="New Patient Enrollment" style="text-align:center;margin:10px" />
   </form>
 
 

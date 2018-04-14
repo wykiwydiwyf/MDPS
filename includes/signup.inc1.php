@@ -21,11 +21,17 @@ $pat_name=$_POST['pat_name'];
 $age=$_POST['age'];
 $gender=$_POST['gender'];
 $address=$_POST['address'];
-$visit_date=$_POST['visit_date'];
 $symptom=$_POST['symptom'];
 $T=$_POST['T'];
 $dur_in_hos=$_POST['dur_in_hos'];
 
+
+$todo=$_POST['todo'];
+$month=$_POST['month'];
+$dt=$_POST['dt'];
+$year=$_POST['year'];
+
+$visit_date="$year-$month-$dt";
 
 
 
