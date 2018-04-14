@@ -185,15 +185,6 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-  $query = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')";
-                      mysqli_query($conn, $query) or die(mysqli_error($conn));
-                        //let them know the person has been added. 
-  echo mysqli_errno($conn);
-  echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ...'$pat_id','$doc_id','$if_surge','$disease','$treatment' </span>";
-  echo str_repeat('&nbsp;', 100);
-              }
-
-
               $sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
               $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment');";
               
@@ -215,6 +206,11 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
                   }
                 while (mysqli_next_result($conn));
               }
+                                      //let them know the person has been added. 
+                                      echo mysqli_errno($conn);
+                                      echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ... </span>";
+                                      echo str_repeat('&nbsp;', 100);
+            }
 ?>
 
 
