@@ -29,7 +29,9 @@
   echo str_repeat('&nbsp;', 5);
     ?>
 
-  <form action="insert.inc1.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+  
+
+   <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
@@ -77,9 +79,103 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Assign</button>
+    
+    <div class="form-group">
+    <label for="table1">Diagnosis Date</label>
+    <table border="0" cellspacing="0" id="table1">
+
+<tr><td  align=left  >   
+
+<select name=month value=''>Select Month</option>
+<option value='01'>January</option>
+<option value='02'>February</option>
+<option value='03'>March</option>
+<option value='04'>April</option>
+<option value='05'>May</option>
+<option value='06'>June</option>
+<option value='07'>July</option>
+<option value='08'>August</option>
+<option value='09'>September</option>
+<option value='10'>October</option>
+<option value='11'>November</option>
+<option value='12'>December</option>
+</select>
+
+
+
+</td><td  align=left  >   
+
+Date<select name=dt >
+
+<option value='01'>01</option>
+<option value='02'>02</option>
+<option value='03'>03</option>
+<option value='04'>04</option>
+<option value='05'>05</option>
+<option value='06'>06</option>
+<option value='07'>07</option>
+<option value='08'>08</option>
+<option value='09'>09</option>
+<option value='10'>10</option>
+<option value='11'>11</option>
+<option value='12'>12</option>
+<option value='13'>13</option>
+<option value='14'>14</option>
+<option value='15'>15</option>
+<option value='16'>16</option>
+<option value='17'>17</option>
+<option value='18'>18</option>
+<option value='19'>19</option>
+<option value='20'>20</option>
+<option value='21'>21</option>
+<option value='22'>22</option>
+<option value='23'>23</option>
+<option value='24'>24</option>
+<option value='25'>25</option>
+<option value='26'>26</option>
+<option value='27'>27</option>
+<option value='28'>28</option>
+<option value='29'>29</option>
+<option value='30'>30</option>
+<option value='31'>31</option>
+</select>
+
+</td><td  align=left  >   
+Year(yyyy)<input type=text name=year size=4 value=2005>
+
+</table>
+
+</div>
+
+     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Assign Doctor" style="text-align:right;margin:10px" />
   </form>
-  
+
+<?php 
+
+
+$doc_id=$_POST['doc_id'];
+$pat_id=$_POST['pat_id'];
+$todo=$_POST['todo'];
+$month=$_POST['month'];
+$dt=$_POST['dt'];
+$year=$_POST['year'];
+
+$date="$year-$month-$dt";
+
+
+
+if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
+
+  $query = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')";
+                      mysqli_query($conn, $query) or die(mysqli_error($conn));
+                        //let them know the person has been added. 
+  echo mysqli_errno($conn);
+  echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
+  echo str_repeat('&nbsp;', 100);
+              }
+
+?>
+
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Division Query :Show who is/are the doctors for all patients</h5>";
