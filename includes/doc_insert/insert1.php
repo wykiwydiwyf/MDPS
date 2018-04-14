@@ -189,7 +189,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
                       mysqli_query($conn, $query) or die(mysqli_error($conn));
                         //let them know the person has been added. 
   echo mysqli_errno($conn);
-  echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ... </span>";
+  echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ...'$pat_id','$doc_id','$if_surge','$disease','$treatment' </span>";
   echo str_repeat('&nbsp;', 100);
               }
 
