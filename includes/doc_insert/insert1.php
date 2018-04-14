@@ -83,7 +83,9 @@ $result = mysqli_query($conn, $query);
       </select>
     </div>
     
-<table border="0" cellspacing="0" >
+    <div class="form-group">
+    <label for="table1">Diagnosis Date</label>
+    <table border="0" cellspacing="0" id="table1">
 
 <tr><td  align=left  >   
 
@@ -145,6 +147,7 @@ Date<select name=dt >
 </td><td  align=left  >   
 Year(yyyy)<input type=text name=year size=4 value=2005>
 <input type=submit value=Submit>
+</div>
 </table>
     <button type="submit" class="btn btn-primary">Assign</button>
   </form>
