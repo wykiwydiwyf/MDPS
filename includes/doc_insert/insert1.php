@@ -169,14 +169,10 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-  $sql = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES($pat_id,$doc_id,$date);";
-  mysqli_query($conn, $sql);
-
-  //let them know the person has been added. 
-  echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
-  echo str_repeat('&nbsp;', 100);
-}
-
+  $query = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES($pat_id,$doc_id,$date)";
+                      $result = mysqli_query($conn, $query);
+                      mysqli_query($conn, $query);
+              }
 
 ?>
 
