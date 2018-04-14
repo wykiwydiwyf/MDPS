@@ -4,9 +4,9 @@
   </head>
 <body>
 
-  <h1 style="color:lightblue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
+  <h1 style="color:navi;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1VX1UzLfk9O4hCpE_EqHqlZssw11a2r6BWsTSdcvnniDRVbxOAg" class="img-fluid" alt="Responsive image">
+<img src="https://d371ua0s3oj08z.cloudfront.net/styles/hero/hero.jpg?itok=CK1mVAzA" class="img-fluid" alt="Responsive image">
 
 
   <form style="margin-buttom:200px">
