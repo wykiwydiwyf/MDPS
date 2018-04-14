@@ -27,8 +27,7 @@ $year=$_POST['year'];
 $date="$year-$month-$dt";
 
 
-$sql  = 'INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')';
-
+$sql  = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
 mysqli_query($conn, $sql);
 
 
