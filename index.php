@@ -6,7 +6,7 @@
 
   <h1 style="color:lightblue;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
-<img src="https://www.iaspaper.net/wp-content/uploads/2017/08/WBJEE-Medical.jpg" class="img-fluid" alt="Responsive image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1VX1UzLfk9O4hCpE_EqHqlZssw11a2r6BWsTSdcvnniDRVbxOAg" height="200" class="img-fluid" alt="Responsive image">
 
   <div class="container-fluid" style="background-color:lightblue">
   <form>
