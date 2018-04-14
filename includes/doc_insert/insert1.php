@@ -153,7 +153,29 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
      <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Assign Doctor" style="text-align:right;margin:10px" />
   </form>
 
+<?php 
 
+
+$doc_id=$_POST['doc_id'];
+$pat_id=$_POST['pat_id'];
+$todo=$_POST['todo'];
+$month=$_POST['month'];
+$dt=$_POST['dt'];
+$year=$_POST['year'];
+
+$date="$year-$month-$dt";
+
+
+
+if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
+
+  $sql = "INSERT INTO patient_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
+  mysqli_query($conn, $sql);
+}
+//let them know the person has been added. 
+echo "Data successfully inserted into the database table ... ";
+
+?>
 
 
   <?php
