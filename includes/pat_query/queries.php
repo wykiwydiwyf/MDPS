@@ -26,7 +26,7 @@
   </form>
   <?php  
   echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL PAT_QUERY1</h5>";
+  echo "<h5>MYSQL PAT_Simple_QUERY1</h5>";
   echo "<h5>Insert New Patient Information</h5>";
 
     ?>

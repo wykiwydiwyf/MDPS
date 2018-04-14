@@ -24,10 +24,12 @@
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
   <?php
-  echo str_repeat('&nbsp;', 10);
+  echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Insert2</h5>";
   echo "<h5>Update Diagnosis Result for Existing Patient</h5>";
-  echo str_repeat('&nbsp;', 5);
+  echo str_repeat('&nbsp;', 50);
+  echo "Select the Patient's ID and Doctor ID to Update";
+  echo str_repeat('&nbsp;', 50);
     ?>
 
       <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
@@ -73,7 +75,9 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-    
+    <?php 
+          echo "Enter The New Information Below";
+           ?>
     <div class="form-group">
     <label for="table1">Diagnosis Date</label>
     <table border="0" cellspacing="0" id="table1">
@@ -177,8 +181,8 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-              $sql  = "UPDATE pat_doc_1 SET pat_id = '$pat_id' , doc_id = '$doc_id', date = '$date';";
-              $sql .= "UPDATE pat_doc_2 SET pat_id = '$pat_id' , doc_id = '$doc_id', if_surge = '$if_surge', disease = '$disease', treatment = '$treatment';";
+              $sql  = "UPDATE pat_doc_1 SET date = '$date' Where doc_id = '$doc_id' AND pat_id = '$pat_id';";
+              $sql .= "UPDATE pat_doc_2 SET if_surge = '$if_surge', disease = '$disease', treatment = '$treatment' Where doc_id = '$doc_id' AND pat_id = '$pat_id';";
 
               
               // Execute multi query
