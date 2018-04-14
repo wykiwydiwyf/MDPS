@@ -82,38 +82,7 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Assign</button>
-  </form>
-
-  
-  <?Php
-
-$todo=$_POST['todo'];
-
-if(isset($todo) and $todo=="submit"){
-
-$month=$_POST['month'];
-
-$dt=$_POST['dt'];
-
-$year=$_POST['year'];
-
-$date_value="$month/$dt/$year";
-
-echo "mm/dd/yyyy format :$date_value<br>";
-
-$date_value="$year-$month-$dt";
-
-echo "YYYY-mm-dd format :$date_value<br>";
-
-}
-
-
-
-?>
-
-<form method=post name=f1 action=''><input type=hidden name=todo value=submit>
-
+    
 <table border="0" cellspacing="0" >
 
 <tr><td  align=left  >   
@@ -177,7 +146,36 @@ Date<select name=dt >
 Year(yyyy)<input type=text name=year size=4 value=2005>
 <input type=submit value=Submit>
 </table>
-</form>
+    <button type="submit" class="btn btn-primary">Assign</button>
+  </form>
+
+
+  <?Php
+
+$todo=$_POST['todo'];
+
+if(isset($todo) and $todo=="submit"){
+
+$month=$_POST['month'];
+
+$dt=$_POST['dt'];
+
+$year=$_POST['year'];
+
+$date_value="$month/$dt/$year";
+
+echo "mm/dd/yyyy format :$date_value<br>";
+
+$date_value="$year-$month-$dt";
+
+echo "YYYY-mm-dd format :$date_value<br>";
+
+}
+
+
+
+?>
+
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
