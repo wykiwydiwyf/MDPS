@@ -177,8 +177,9 @@ $date="$year-$month-$dt";
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
-              $sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
-              $sql .= "INSERT INTO pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) VALUES('$pat_id','$doc_id','$if_surge','$disease','$treatment');";
+              $sql  = "UPDATE pat_doc_1(pat_id,doc_id,date) SET pat_id = '$pat_id' AND SET doc_id = '$doc_id'AND SET date = '$date';";
+              $sql .= "UPDATE pat_doc_2(pat_id,doc_id,if_surge,disease,treatment) SET pat_id = '$pat_id' AND SET doc_id = '$doc_id'AND SET if_surge = '$if_surge'AND SET disease = '$disease'AND SET treatment = '$treatment';";
+
               
               // Execute multi query
               if (mysqli_multi_query($conn,$sql))
@@ -204,6 +205,12 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
                                       echo str_repeat('&nbsp;', 300);
             }
 ?>
+
+ <?php
+  echo str_repeat('&nbsp;', 100);
+  echo "<h5>MYSQL Query - Join Query :Show all diagnostic results </h5>";
+  echo str_repeat('&nbsp;', 500);
+    ?>
 
   <table class="table thead-light table-bordered">
     <thead>
@@ -254,7 +261,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   <?php
   echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
-  echo str_repeat('&nbsp;', 200);
+  echo str_repeat('&nbsp;', 500);
     ?>
 
   <table class="table thead-light table-bordered">
