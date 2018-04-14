@@ -28,7 +28,6 @@
 
 <div class="box">
 <img class="large_image" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523723064453&di=180f07437df7281475395d4bb265cbfa&imgtype=0&src=http%3A%2F%2Fvpic.video.qq.com%2F92309057%2Fm0347mu4mjy_ori_3.jpg" id="large_image_1" style="display: inline;">
-</div>
 div.box {
     border: 1px black solid;
     height: 64px;
@@ -41,6 +40,8 @@ div.box {
     display:block;
     margin: 0px auto;
 }
+</div>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
