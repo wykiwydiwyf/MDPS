@@ -27,8 +27,14 @@
   </div>
 
 
-<img class="center" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523723064453&di=180f07437df7281475395d4bb265cbfa&imgtype=0&src=http%3A%2F%2Fvpic.video.qq.com%2F92309057%2Fm0347mu4mjy_ori_3.jpg" id="large_image_1" style="display: inline;">
-
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523723064453&di=180f07437df7281475395d4bb265cbfa&imgtype=0&src=http%3A%2F%2Fvpic.video.qq.com%2F92309057%2Fm0347mu4mjy_ori_3.jpg" id="large_image_1">
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
