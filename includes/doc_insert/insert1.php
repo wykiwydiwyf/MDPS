@@ -173,7 +173,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   mysqli_query($conn, $sql);
 
   //let them know the person has been added. 
-  echo "<span style='color:#AFA;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
+  echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
   echo str_repeat('&nbsp;', 100);
 }
 
