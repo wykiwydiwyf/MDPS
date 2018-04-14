@@ -3,7 +3,7 @@
     <title>INFS7901-Tables</title>
   </head>
 <body>
-<img src="https://d371ua0s3oj08z.cloudfront.net/styles/hero/hero.jpg?itok=CK1mVAzA" height="200" width="screen.width'px'">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkkg5CtqgsROi7tlC68q8r9uAFCOntv3AkMZamFY2M8kbmWIBU" style="margin-buttom:100px,margin-top:100px">
 
   <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MEPS) </h1>
 
