@@ -161,10 +161,10 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
       <input type="text" class="form-control" id="form4" name="disease" placeholder="Name of Disease Paitent has">
 </div>
 <div class="form-group">
-      <label for="form5">Patient's ID</label>
+      <label for="form5">Treatment</label>
       <input type="text" class="form-control" id="form5" name="treatment" placeholder="Treatment">
 </div>
-     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Assign Doctor" style="text-align:right;margin:10px" />
+     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Add Diagnostic Result" style="text-align:right;margin:10px" />
   </form>
 
 <?php 
@@ -189,7 +189,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
                       mysqli_query($conn, $query) or die(mysqli_error($conn));
                         //let them know the person has been added. 
   echo mysqli_errno($conn);
-  echo "<span style='color:Green;'> PatientID $pat_id has successfully assigned with DoctorID $doc_id for diagnosis date $date ... </span>";
+  echo "<span style='color:Green;'> Diagnotic information for PatientID $pat_id has successfully added ... </span>";
   echo str_repeat('&nbsp;', 100);
               }
 
