@@ -27,29 +27,9 @@ $year=$_POST['year'];
 $date="$year-$month-$dt";
 
 
+$sql  = 'INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date')';
 
-
-
-$sql  = "INSERT INTO pat_doc_1(pat_id,doc_id,date) VALUES('$pat_id','$doc_id','$date');";
-
-// Execute multi query
-if (mysqli_multi_query($conn,$sql))
-{
-  do
-    {
-    // Store first result set
-    if ($result=mysqli_store_result($conn)) {
-      // Fetch one and one row
-      while ($row=mysqli_fetch_row($result))
-        {
-        printf("%s\n",$row[0]);
-        }
-      // Free result set
-      mysqli_free_result($result);
-      }
-    }
-  while (mysqli_next_result($conn));
-}
+mysqli_query($conn, $sql);
 
 
 //let them know the person has been added. 
