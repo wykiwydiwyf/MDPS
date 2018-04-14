@@ -11,7 +11,7 @@
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
 
-
+<div class="container-fluid" style="background-color:lightblue">
   <form action="doc_query/queries.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Do Queries" style="text-align:center;margin:10px" />
   </form>
@@ -22,6 +22,7 @@
   <form action="doc_insert/insert2.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Assign a doctor to any patient" style="text-align:center;margin:10px" />
   </form>
+  </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
