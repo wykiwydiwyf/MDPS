@@ -173,7 +173,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   mysqli_query($conn, $sql);
 }
 //let them know the person has been added. 
-echo "Data successfully inserted into the database table ... ";
+echo "Data successfully inserted into the database table ... $date";
 
 ?>
 
