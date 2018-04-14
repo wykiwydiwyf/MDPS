@@ -218,10 +218,10 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
   <?php
   echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Query - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
-  echo str_repeat('&nbsp;', 5);
+  echo str_repeat('&nbsp;', 500);
     ?>
 
-  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
+  <table class="table thead-light table-bordered" >
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
@@ -268,10 +268,10 @@ where pd1.pat_id= p1.pat_id))
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
-  echo str_repeat('&nbsp;', 5);
+  echo str_repeat('&nbsp;', 500);
     ?>
 
-  <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
+  <table class="table thead-light table-bordered">
     <thead>
       <tr>
         <th scope="col">Doctor ID</th>
