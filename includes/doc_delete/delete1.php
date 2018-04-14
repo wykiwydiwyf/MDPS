@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Update Diagnostic Result" style="text-align:right;margin:10px" />
+     <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Delete Diagnostic Result" style="text-align:right;margin:10px" />
   </form>
 
 <?php 
