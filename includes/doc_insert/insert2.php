@@ -27,12 +27,8 @@
   echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Insert2</h5>";
 
-  echo "<h5>Update Diagnosis Result for Existing Patient</h5>";
-  echo '<textarea class="box">Select the Patients ID and Doctor ID to Update</textarea>';
-
-
     ?>
-
+  <h5 style="color:red;text-align:left;">Select the Patients ID and Doctor ID to Update</h1>
       <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
