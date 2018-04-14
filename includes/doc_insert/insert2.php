@@ -35,8 +35,10 @@
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
-$query = "SELECT pat_id
-from patient_1
+$query = "SELECT p.pat_id
+from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
+where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
+order by p.pat_id
 ";
 
 $result = mysqli_query($conn, $query);
@@ -141,6 +143,7 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
 <div class="form-group">
       <label for="form3">Does Patient Need Undertake A Surgery?</label>
       <select class="custom-select" name="if_surge" id="form3">
+      <option selected="">Choose...</option>
       <option value="0">No</option>
       <option value="1">Yes</option>
       </select>
@@ -202,48 +205,50 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
             }
 ?>
 
-
-  <?php
-  echo str_repeat('&nbsp;', 100);
-  echo "<h5>MYSQL Query - Division Query :Show who is/are the doctors for all patients</h5>";
-  echo str_repeat('&nbsp;', 5);
-    ?>
-
   <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
-        <th scope="col">Patient Name</th>
         <th scope="col">Doctor ID</th>
         <th scope="col">Doctor Name</th>
+        <th scope="col">Inpatient(1)/Outpatient(0)</th>
+        <th scope="col">Duration of Day in Hospital</th>
+        <th scope="col">Symptom</th>
+        <th scope="col">Disease</th>
+        <th scope="col">Treatment</th>
+        <th scope="col">Visit Date</th>
+        <th scope="col">Diagnosis Date</th>
       </tr>
     </thead>
 
-    <tbody id="queryTable3">
+    <tbody id="queryTable1">
       <?php
+        $pat_id=$_POST['pat_id'];
 
-$query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name
-from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
-where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
-order by p.pat_id
-";
+
+                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p2.T,p2.dur_in_hos,p2.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
+                    from patient_1 p1,patient_2 p2,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    where p1.pat_id=p2.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
                         echo "<td>".$rows["pat_id"]."</td>";
-                        echo "<td>".$rows["pat_name"]."</td>";
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["T"]."</td>";
+                        echo "<td>".$rows["dur_in_hos"]."</td>";
+                        echo "<td>".$rows["symptom"]."</td>";
+                        echo "<td>".$rows["disease"]."</td>";
+                        echo "<td>".$rows["treatment"]."</td>";
+                        echo "<td>".$rows["visit_date"]."</td>";
+                        echo "<td>".$rows["date"]."</td>";
                         echo "</tr>";
             }
             ?>
 
     </tbody>
   </table>
-  <form>
-    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
-  </form>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query - Simple Query :Show all doctor information </h5>";
