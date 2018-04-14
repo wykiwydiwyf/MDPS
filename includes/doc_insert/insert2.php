@@ -26,10 +26,12 @@
   <?php
   echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Insert2</h5>";
+
   echo "<h5>Update Diagnosis Result for Existing Patient</h5>";
-  echo str_repeat('&nbsp;', 50);
+  echo "\n";
+  echo "\n";
   echo "Select the Patient's ID and Doctor ID to Update";
-  echo str_repeat('&nbsp;', 50);
+
     ?>
 
       <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
