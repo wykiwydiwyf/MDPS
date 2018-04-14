@@ -30,7 +30,7 @@
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Insert1</h5>";
-  echo "<h5>Assign a doctor to un-assigned patient</h5>";
+  echo "<h5>Add Diagnosis Result for New Patient</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
@@ -149,7 +149,18 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
 </table>
 
 </div>
-
+<div class="form-group">
+      <label for="form3">Does Patient Need Undertake A Surgery?</label>
+      <input type="text" class="form-control" id="form3" name="if_surge" placeholder="Input 0 for No, 1 for Yes">
+</div>
+<div class="form-group">
+      <label for="form4">Diagnostic Result</label>
+      <input type="text" class="form-control" id="form4" name="disease" placeholder="Name of Disease Paitent has">
+</div>
+<div class="form-group">
+      <label for="form5">Patient's ID</label>
+      <input type="text" class="form-control" id="form5" name="treatment" placeholder="Treatment">
+</div>
      <input type="submit" name="insert1" class="btn btn-primary btn-lg" value="Assign Doctor" style="text-align:right;margin:10px" />
   </form>
 
@@ -162,7 +173,9 @@ $todo=$_POST['todo'];
 $month=$_POST['month'];
 $dt=$_POST['dt'];
 $year=$_POST['year'];
-
+$if_surge=$_POST['if_surge'];
+$disease=$_POST['disease'];
+$treatment=$_POST['treatment'];
 $date="$year-$month-$dt";
 
 

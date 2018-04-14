@@ -26,7 +26,7 @@
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Insert2</h5>";
-  echo "<h5>Assign a doctor to assigned patient</h5>";
+  echo "<h5>Update Diagnosis Result for Existing Patient</h5>";
   echo str_repeat('&nbsp;', 5);
     ?>
 
