@@ -31,12 +31,12 @@
 
     ?>
 
- <form action="signup.inc1.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+ <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient's ID</label>
       <input type="text" class="form-control" id="form1" name="pat_id" placeholder="Input your patient ID here">
     </div>
-    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
+    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Show Info" style="text-align:right;margin:10px" />
   </form>
 
 
@@ -60,7 +60,7 @@
     <tbody id="queryTable1">
       <?php
         $pat_id=$_POST['pat_id'];
-        
+
             if(isset($_POST["query1"]) && $_POST["query1"] != "") {
 
                     $query = "select p1.pat_id,p1.visit_date,pd1.date,p2.T,p2.dur_in_hos,p2.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
