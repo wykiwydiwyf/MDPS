@@ -29,22 +29,13 @@
   echo str_repeat('&nbsp;', 5);
     ?>
 
-  
-
-   <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+      <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
 $query = "SELECT pat_id
-from patient_1 as p1
-Where not exists
-	(select doc_id
-    from doctor as d
-    where not exists
-    (select pd1.doc_id
-    from pat_doc_1 as pd1
-where pd1.pat_id= p1.pat_id))
+from patient_1
 ";
 
 $result = mysqli_query($conn, $query);
@@ -61,7 +52,7 @@ $result = mysqli_query($conn, $query);
     </div>
     <div class="form-group">
       <label for="form2">Doctor ID</label>
-      <select class="custom-select" name="pat_id" id="form1">
+      <select class="custom-select" name="doc_id" id="form1">
         <?php
 $query = "SELECT *
 from doctor
@@ -175,6 +166,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
               }
 
 ?>
+
 
   <?php
   echo str_repeat('&nbsp;', 10);
