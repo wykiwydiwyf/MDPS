@@ -5,9 +5,9 @@
 <body>
 
 
-<div class="shadow-lg p-3 m-auto bg-white rounded" align="center" style="background-color:brown font-size:180%">
-<img class="mw-100" src="logo.png" alt="Max-width 200%">
-</div>
+
+<img class="mw-100" src="logo.png" alt="Max-width 500%">
+
 
 
 
