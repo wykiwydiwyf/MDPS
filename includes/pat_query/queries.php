@@ -102,7 +102,7 @@
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
-                        echo "<td>"."NULL"."</td>"";
+                        echo "";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "<td>".$rows["visit_date"]."</td>";
