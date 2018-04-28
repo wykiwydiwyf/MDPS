@@ -6,7 +6,7 @@
 
 
 <div align="center">
-<img class="mw-100" src="/logo.png"style="width: 90%">
+<img class="mw-100" src="logo.png"style="width: 90%">
 </div>
 
 
