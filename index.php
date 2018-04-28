@@ -5,7 +5,7 @@
 <body>
 
 
-<div class="bd-example-container bd-example-container-fluid shadow-lg p-3 m-auto bg-white rounded "  style="background-color:black">
+<div class="shadow-lg p-3 m-auto bg-white rounded"  style="background-color:brown">
 <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MDPS) </h1>
   </div>
 
