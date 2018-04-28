@@ -183,6 +183,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
         <th scope="col">AGE</th>
         <th scope="col">Gender</th>
         <th scope="col">Address</th>
+        <th scope="col">Symptom</th>
       </tr>
     </thead>
 
@@ -209,6 +210,7 @@ where pd1.pat_id= p1.pat_id))
                         echo "<td>".$rows["age"]."</td>";
                         echo "<td>".$rows["gender"]."</td>";
                         echo "<td>".$rows["address"]."</td>";
+                        echo "<td>".$rows["symptom"]."</td>";
                         echo "</tr>";
             }
             ?>

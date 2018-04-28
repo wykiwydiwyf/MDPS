@@ -176,6 +176,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
         <th scope="col">AGE</th>
         <th scope="col">Gender</th>
         <th scope="col">Address</th>
+        <th scope="col">Symptom</th>
       </tr>
     </thead>
 
@@ -183,14 +184,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
       <?php
 
 $query = "SELECT *
-from patient_1 as p1
-Where exists
-	(select doc_id
-    from doctor as d
-    where not exists
-    (select pd1.doc_id
-    from pat_doc_1 as pd1
-where pd1.pat_id= p1.pat_id))
+from patient_1
 ";
                     $result = mysqli_query($conn, $query);
                     
@@ -202,6 +196,7 @@ where pd1.pat_id= p1.pat_id))
                         echo "<td>".$rows["age"]."</td>";
                         echo "<td>".$rows["gender"]."</td>";
                         echo "<td>".$rows["address"]."</td>";
+                        echo "<td>".$rows["symptom"]."</td>";
                         echo "</tr>";
             }
             ?>
