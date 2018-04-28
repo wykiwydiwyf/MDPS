@@ -92,7 +92,7 @@
             if(isset($_POST["query1"]) && $_POST["query1"] != "") {
 
                     $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
-                    from patient_1 p1,outpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    from patient_1 p1,outpatient op,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
                     where p1.pat_id = op.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
                     $result = mysqli_query($conn, $query);
                     
@@ -102,7 +102,7 @@
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
-                        echo "<td>".$rows["symptom"]."</td>";
+                        echo "<td>",N/A,"</td>";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "<td>".$rows["visit_date"]."</td>";
