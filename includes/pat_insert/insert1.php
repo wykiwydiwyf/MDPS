@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $query);
         <option selected="">Choose...</option>
         <?php 
           while ($row = mysqli_fetch_array($result)) {
-          echo "<option value=""'.$row["hos_name"]'".">".$row["hos_name"]."</option>";
+          echo "<option value=".'$row["hos_name"]'.">".$row["hos_name"]."</option>";
           }
            ?>
       </select>
