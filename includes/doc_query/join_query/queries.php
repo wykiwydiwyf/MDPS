@@ -73,7 +73,7 @@
     <form action="" method="post">
     <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
     </form>
-    <table class="table thead-light table-bordered" style="margin-top:100px;margin-bottom:100px;margin-left:100px;margin-right:300px">
+    <table class="table thead-light table-bordered" >
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
