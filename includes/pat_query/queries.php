@@ -81,7 +81,31 @@
     </thead>
 
     <tbody id="queryTable1">
+      <?php
+        $pat_id=$_POST['pat_id'];
 
+            if(isset($_POST["query1"]) && $_POST["query1"] != "") {
+
+                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
+                    from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["symptom"]."</td>";
+                        echo "<td>".$rows["dur_in_hos"]."</td>";
+                        echo "<td>".$rows["disease"]."</td>";
+                        echo "<td>".$rows["treatment"]."</td>";
+                        echo "<td>".$rows["visit_date"]."</td>";
+                        echo "<td>".$rows["date"]."</td>";
+                        echo "</tr>";
+                    }
+            }
+            ?>
       <?php
         $pat_id=$_POST['pat_id'];
 
