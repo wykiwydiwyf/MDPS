@@ -34,7 +34,7 @@
 
 
 
-  <form action="signup.inc1.php" method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
+  <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
     <div class="form-group">
       <label for="form1">Patient's Name</label>
       <input type="text" class="form-control" id="form1" name="pat_name" placeholder="First Name   Last Name">
@@ -159,6 +159,64 @@ Year(yyyy)<input type=text name=year size=4 value=2005>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
+<?php 
+
+
+$pat_name=$_POST['pat_name'];
+$age=$_POST['age'];
+$gender=$_POST['gender'];
+$address=$_POST['address'];
+$symptom=$_POST['symptom'];
+$hos_name=$_POST['hos_name'];
+$T=$_POST['T'];
+$dur_in_hos=$_POST['dur_in_hos'];
+
+
+$todo=$_POST['todo'];
+$month=$_POST['month'];
+$dt=$_POST['dt'];
+$year=$_POST['year'];
+
+$visit_date="$year-$month-$dt";
+
+
+
+
+$sql  = "INSERT INTO patient_1(pat_id,pat_name,age,gender,address,visit_date,symptom) VALUES(NULL,'$pat_name','$age','$gender','$address','$visit_date','$symptom');";
+
+if ($T = "1")
+{
+  $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'),'$dur_in_hos')";
+  echo $hos_name;
+  echo $T;
+}else{
+  $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'))";
+  echo $hos_name;
+  echo $T;
+}
+
+// Execute multi query
+if (mysqli_multi_query($conn,$sql))
+{
+  do
+    {
+    // Store first result set
+    if ($result=mysqli_store_result($conn)) {
+      // Fetch one and one row
+      while ($row=mysqli_fetch_row($result))
+        {
+        printf("%s\n",$row[0]);
+        }
+      // Free result set
+      mysqli_free_result($result);
+      }
+    }
+  while (mysqli_next_result($conn));
+}
+
+//let them know the person has been added. 
+
+?>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
