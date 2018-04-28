@@ -5,9 +5,9 @@
 <body>
 
 
-
+<div align="center">
 <img class="mw-100" src="logo.png" alt="Max-width 500%">
-
+</div>
 
 
 
