@@ -5,9 +5,9 @@
 <body>
 
 
-<div class="shadow-lg p-3 m-auto bg-white rounded"  style="background-color:brown">
-<h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MDPS) </h1>
-  </div>
+<div class="shadow-lg p-3 m-auto bg-white rounded" align="center" style="background-color:brown font-size:180%">
+INFS7901 Project: Medical Database Processing System(MDPS)
+</div>
 
 
   <form>
