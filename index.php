@@ -9,7 +9,7 @@
 <h1>INFS7901 Project: Medical Database Processing System(MDPS)</h1>
 </div>
 
-<img class="mw-100" src="logo.jpg" alt="Max-width 100%">
+<img class="mw-100" src="logo.png" alt="Max-width 150%">
 
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
