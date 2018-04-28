@@ -15,7 +15,7 @@
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
   <form>
-    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-right mr-5" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
+    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-right mr-50" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
   </form>
   <div class="container-fluid" style="background-color:lightblue">
   <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
