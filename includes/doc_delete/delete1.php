@@ -159,7 +159,7 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
 
                     $query = "select p1.pat_id,p1.pat_name,p1.visit_date,pd1.date,p1.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.if_surge,pd2.treatment
                     from patient_1 p1,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
-                    where p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id";
+                    where p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd1.doc_id and d.doc_id = pd2.doc_id";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
