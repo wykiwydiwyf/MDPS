@@ -71,7 +71,7 @@
   <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <form action="" method="post">
-    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
+    <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
     </form>
     <table class="table thead-light table-bordered" >
     <thead>
