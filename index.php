@@ -27,15 +27,37 @@
   </div>
 
 
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523723064453&di=180f07437df7281475395d4bb265cbfa&imgtype=0&src=http%3A%2F%2Fvpic.video.qq.com%2F92309057%2Fm0347mu4mjy_ori_3.jpg" id="large_image_1">
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 300px;
+<?php
+function LoadPNG($imgname)
+{
+    /* Attempt to open */
+    $im = @imagecreatefrompng($imgname);
+
+    /* See if it failed */
+    if(!$im)
+    {
+        /* Create a blank image */
+        $im  = imagecreatetruecolor(150, 30);
+        $bgc = imagecolorallocate($im, 255, 255, 255);
+        $tc  = imagecolorallocate($im, 0, 0, 0);
+
+        imagefilledrectangle($im, 0, 0, 150, 30, $bgc);
+
+        /* Output an error message */
+        imagestring($im, 1, 5, 5, 'Error loading ' . $imgname, $tc);
+    }
+
+    return $im;
 }
-</style>
+
+header('Content-Type: image/png');
+
+$img = LoadPNG('er_project.image');
+
+imagepng($img);
+imagedestroy($img);
+?>
+
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

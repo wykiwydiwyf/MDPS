@@ -144,7 +144,6 @@ where pd1.pat_id= p1.pat_id))
         <th scope="col">AGE</th>
         <th scope="col">Gender</th>
         <th scope="col">Address</th>
-        <th scope="col">Hospital Name</th>
       </tr>
     </thead>
 

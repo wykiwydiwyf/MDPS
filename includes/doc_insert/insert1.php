@@ -230,7 +230,6 @@ if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
         <th scope="col">AGE</th>
         <th scope="col">Gender</th>
         <th scope="col">Address</th>
-        <th scope="col">Hospital Name</th>
       </tr>
     </thead>
 
