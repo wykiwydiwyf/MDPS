@@ -101,7 +101,7 @@
         $pat_id=$_POST['pat_id'];
 
                     $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
-                    from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d，outpatient as op
+                    from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d,outpatient as op
                     where p1.pat_id=ip.pat_id and p1.pat_id = op.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id";
                     $result = mysqli_query($conn, $query);
                     
