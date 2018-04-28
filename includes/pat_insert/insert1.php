@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $query);
         <option selected="">Choose...</option>
         <?php 
           while ($row = mysqli_fetch_array($result)) {
-          echo "<option value=".$row["hos_name"].">".$row["hos_name"]."</option>";
+          echo "<option value=""'.$row["hos_name"]'".">".$row["hos_name"]."</option>";
           }
            ?>
       </select>
@@ -187,11 +187,11 @@ echo $T;
 
 if ($T > "0")
 {
-  $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'),'$dur_in_hos')";
+  $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = 'Little Rabbit Hospital'),'$dur_in_hos')";
   echo $hos_name;
   echo $T;
 }else{
-  $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'))";
+  $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = 'Little Rabbit Hospital'))";
   echo $hos_name;
   echo $T;
 }
