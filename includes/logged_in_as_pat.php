@@ -6,6 +6,13 @@
   
 <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MDPS) </h1>
   
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Patient</li>
+  </ol>
+</nav>
+
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
