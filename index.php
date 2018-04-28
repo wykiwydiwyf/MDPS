@@ -24,12 +24,19 @@
 
 
 
-
+<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+<div>
   <form>
-    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-left ml-5" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
+    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-left ml-5" onclick="window.location.href='er_diagram/er.php'" />
+  </form>
+  </div>
+<div>
+  <form>
+    
     <input type="button" value="Project Proposal" class="btn btn-outline-info btn-lg float-left mr-5" onclick="window.location.href='summary/summary.php'" />
   </form>
-
+  </div>
+</div>
 
 
   <div class="container-fluid col-12 col-md-9 col-xl-8 py-md-3 bd-content" style="background-color:lightblue">
