@@ -56,21 +56,62 @@
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Join Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find all surgeries, and show all surgeries information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
+    </form>
+    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find information for all patients including inpatient and outpatient</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries2.php';"/>
+    </form>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Disease</th>
+        <th scope="col">Treatment</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+                    $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["pat_id"]."</td>";
+                        echo "<td>".$rows["pat_name"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["disease"]."</td>";
+                        echo "<td>".$rows["treatment"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
+
+    </tbody>
+  </table>
   </div>
 </div>
 
@@ -85,26 +126,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
-
-
-
-<h2 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
-  <?php
-  echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL Query1 - Join Query :Information for all surgeries </h5>";
-  echo "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment<br>";
-  echo "from doctor as d, pat_doc_2 as pd2 ,patient_1 as p<br>";
-  echo "where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1<br>";
-  echo str_repeat('&nbsp;', 5);
-    ?>
-  <form action="" method="post">
-    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Run Query1" style="text-align:right;margin:10px" />
-  </form>
-
-
-
-
-
 
 
