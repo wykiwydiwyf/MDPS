@@ -72,9 +72,14 @@
   </div>
   <div class="card-body">
   <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <p class="card-text">Find all surgeries, and show all surgeries information</p>
     <form action="" method="post">
-    <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='join_query/queries.php';"/>
+    </form>
+    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find information for all patients including inpatient and outpatient</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='join_query/queries2.php';"/>
     </form>
     <table class="table thead-light table-bordered">
     <thead>
@@ -95,8 +100,6 @@
       <?php
         $pat_id=$_POST['pat_id'];
 
-            if(isset($_POST["query1"]) && $_POST["query1"] != "") {
-
                     $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
                     from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
                     where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id";
@@ -114,8 +117,7 @@
                         echo "<td>".$rows["visit_date"]."</td>";
                         echo "<td>".$rows["date"]."</td>";
                         echo "</tr>";
-                    }
-            }
+                        }
             ?>
 
     </tbody>

@@ -72,9 +72,14 @@
   </div>
   <div class="card-body">
   <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <p class="card-text">Find all surgeries, and show all surgeries information</p>
     <form action="" method="post">
-    <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='join_query/queries.php';"/>
+    </form>
+    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find information for all patients including inpatient and outpatient</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='join_query/queries2.php';"/>
     </form>
     <table class="table thead-light table-bordered" >
     <thead>
