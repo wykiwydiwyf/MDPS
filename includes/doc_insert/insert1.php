@@ -89,6 +89,8 @@ $result = mysqli_query($conn, $query);
 
 <tr><td  align=left  >   
 
+<input type="date" id="date" name="date">
+
 <select name=month value=''>Select Month</option>
 <option value='01'>January</option>
 <option value='02'>February</option>
@@ -180,8 +182,8 @@ $year=$_POST['year'];
 $if_surge=$_POST['if_surge'];
 $disease=$_POST['disease'];
 $treatment=$_POST['treatment'];
-$date="$year-$month-$dt";
-
+$date1="$year-$month-$dt";
+$date=$_POST['date'];
 
 
 if(isset($_POST["insert1"]) && $_POST["insert1"] != "") {
