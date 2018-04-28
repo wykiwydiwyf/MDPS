@@ -43,9 +43,11 @@ if ($T = "1")
 {
   $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'),'$dur_in_hos')";
   echo $hos_name;
+  echo $T;
 }else{
   $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'))";
   echo $hos_name;
+  echo $T;
 }
 
 // Execute multi query
