@@ -10,12 +10,12 @@
 
 
 
-  <form style="margin-buttom:200px">
+  <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
-  <form class =.bottomright>
-    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
+  <form>
+    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg pull-right" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
   </form>
   <div class="container-fluid" style="background-color:lightblue">
   <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
@@ -27,14 +27,7 @@
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Patient" style="text-align:center;margin:10px" />
   </form>
   </div>
-  <style>
-.bottomright {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    font-size: 18px;
-}
-</style>
+
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
