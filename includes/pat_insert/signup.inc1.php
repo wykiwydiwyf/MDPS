@@ -22,6 +22,7 @@ $age=$_POST['age'];
 $gender=$_POST['gender'];
 $address=$_POST['address'];
 $symptom=$_POST['symptom'];
+$hos_name=$_POST['hos_name'];
 $T=$_POST['T'];
 $dur_in_hos=$_POST['dur_in_hos'];
 
@@ -41,10 +42,10 @@ $sql  = "INSERT INTO patient_1(pat_id,pat_name,age,gender,address,visit_date,sym
 if ($T = "1")
 {
   $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'),'$dur_in_hos')";
-  echo $hos_name;
+
 }else{
   $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'))";
-  echo $hos_name;
+
 }
 
 // Execute multi query
