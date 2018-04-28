@@ -15,7 +15,7 @@
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
 
-<img src="er_project.png" />
+<img class = "img" src="er_project.png" />
 
 <style>
 img {
