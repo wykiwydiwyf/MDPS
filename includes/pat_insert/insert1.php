@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $query);
         <option selected="">Choose...</option>
         <?php 
           while ($row = mysqli_fetch_array($result)) {
-          echo "<option value=".'$row["hos_name"]'.">".$row["hos_name"]."</option>";
+          echo "<option value=".$row["hos_name"].">".$row["hos_name"]."</option>";
           }
            ?>
       </select>
@@ -183,17 +183,13 @@ $visit_date="$year-$month-$dt";
 
 
 $sql  = "INSERT INTO patient_1(pat_id,pat_name,age,gender,address,visit_date,symptom) VALUES(NULL,'$pat_name','$age','$gender','$address','$visit_date','$symptom');";
-echo $T;
+
 
 if ($T > "0")
 {
   $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = 'Little Rabbit Hospital'),'$dur_in_hos')";
-  echo $hos_name;
-  echo $T;
 }else{
   $sql .= "INSERT INTO outpatient(pat_id,hos_name) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = 'Little Rabbit Hospital'))";
-  echo $hos_name;
-  echo $T;
 }
 
 
@@ -217,7 +213,7 @@ if (mysqli_multi_query($conn,$sql))
 }
 
 //let them know the person has been added. 
-
+echo "The New Patient Information is Added!";
 ?>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
