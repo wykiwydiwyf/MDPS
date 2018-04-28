@@ -6,10 +6,10 @@
 
 
 <div class="shadow-lg p-3 m-auto bg-white rounded" align="center" style="background-color:brown font-size:180%">
-<h1>INFS7901 Project: Medical Database Processing System(MDPS)</h1>
+<img class="mw-100" src="logo.png" alt="Max-width 200%">
 </div>
 
-<img class="mw-100" src="logo.png" alt="Max-width 150%">
+
 
   <form>
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
