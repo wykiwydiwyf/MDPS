@@ -114,7 +114,7 @@ $result = mysqli_query($conn, $query);
     </div>
     <div class="form-group">
       <label for="form8">How Many Days You Expect to Stay in Hospital</label>
-      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Input NULL for Outpatient">
+      <input type="text" class="form-control" id="form8" name="dur_in_hos" placeholder="Only for Inpatient">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
