@@ -60,10 +60,10 @@
         <a class="nav-link active" href="#">Join Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/division_query/queries.php">Division Query</a>
+        <a class="nav-link" href="division_query/queries.php">Division Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/aggregation_query/queries.php">Aggregation Query</a>
+        <a class="nav-link" href="aggregation_query/queries.php">Aggregation Query</a>
       </li>
     </ul>
   </div>
@@ -71,7 +71,7 @@
   <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find all surgeries, and show all surgeries information</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='/join_query/queries.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='join_query/queries.php';"/>
     </form>
     </tbody>
   </table>
