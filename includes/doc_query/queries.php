@@ -33,7 +33,7 @@
     </nav>
 
 
-<div class="container-fluid">
+<div class="container-fluid row">
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
