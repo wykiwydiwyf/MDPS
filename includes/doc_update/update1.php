@@ -23,6 +23,15 @@
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
+
+      <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/includes/logged_in_as_doc.php">Doctor</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Update</li>
+    </ol>
+    </nav>
+
   <?php
   echo str_repeat('&nbsp;', 100);
   echo "<h5>MYSQL Update1</h5>";

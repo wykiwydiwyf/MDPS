@@ -24,7 +24,20 @@
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
+
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/includes/logged_in_as_pat.php">Patient</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Query</li>
+    </ol>
+    </nav>
+
+
   <?php  
+
+  
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL PAT_Simple_QUERY1</h5>";
   echo "<h5>Look Up Patient Information</h5>";

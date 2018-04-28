@@ -15,6 +15,13 @@
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">ER-Diagram</li>
+  </ol>
+</nav>
+
 <img class = "img" src="er_project.png" />
 
 <style>
