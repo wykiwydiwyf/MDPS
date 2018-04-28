@@ -12,13 +12,27 @@
     <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
     <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
-  
+
   <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Doctor</li>
   </ol>
   </nav>
+
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+<div class="bd-toc-item active">
+      <a class="bd-toc-link" href="https://yifei.uqcloud.net/MDPS/includes/logged_in_as_doc.php">
+        Doctor
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="https://yifei.uqcloud.net/MDPS/includes/doc_query/queries.php">
+              Query
+            </a></li><li>
+    </div>
+    </nav>
+
 
 <div class="container-fluid" style="background-color:lightblue">
   <form action="doc_query/queries.php" method="post" style="margin:100px">
