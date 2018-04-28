@@ -51,9 +51,8 @@
         <th scope="col">Patient ID</th>
         <th scope="col">Doctor ID</th>
         <th scope="col">Doctor Name</th>
-        <th scope="col">Inpatient(1)/Outpatient(0)</th>
-        <th scope="col">Duration of Day in Hospital</th>
         <th scope="col">Symptom</th>
+        <th scope="col">Duration of Day in Hospital</th>
         <th scope="col">Disease</th>
         <th scope="col">Treatment</th>
         <th scope="col">Visit Date</th>
@@ -67,9 +66,9 @@
 
             if(isset($_POST["query1"]) && $_POST["query1"] != "") {
 
-                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p2.T,p2.dur_in_hos,p2.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
-                    from patient_1 p1,patient_2 p2,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
-                    where p1.pat_id=p2.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
+                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
+                    from patient_1 p1,inpatient ip,outpatient op,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    where p1.pat_id=ip.pat_id and p1.pat_id = op.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
@@ -77,9 +76,8 @@
                         echo "<td>".$rows["pat_id"]."</td>";
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
-                        echo "<td>".$rows["T"]."</td>";
-                        echo "<td>".$rows["dur_in_hos"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
+                        echo "<td>".$rows["dur_in_hos"]."</td>";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "<td>".$rows["visit_date"]."</td>";
