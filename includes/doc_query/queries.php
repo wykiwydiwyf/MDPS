@@ -36,6 +36,10 @@
 <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#query1">All Surgeries</a></li>
+<li class="toc-entry toc-h2"><a href="#query2">Show who is/are the doctors for each patients</a></li>
+<li class="toc-entry toc-h2"><a href="#query3">Show all inpatient’s information who hasn’t been signed with a doctor</a></li>
+<li class="toc-entry toc-h2"><a href="#query4">Show all doctor information</a></li>
+
 </ul>
 </div>
 
@@ -86,7 +90,7 @@
 
     </tbody>
   </table>
-
+  <h2 id="query2"><div>Show who is/are the doctors for each patients<a class="anchorjs-link " href="#query2" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query2 - Join Query :Show who is/are the doctors for each patients </h5>";
@@ -134,7 +138,7 @@ order by p.pat_id";
     </tbody>
   </table>
 
-
+<h2 id="query3"><div>Show all inpatient’s information who hasn’t been signed with a doctor<a class="anchorjs-link " href="#query3" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query3 - Division Query :Show all inpatient’s information who hasn’t been signed with a doctor </h5>";
@@ -197,6 +201,8 @@ where pd1.pat_id= p1.pat_id))
     </tbody>
   </table>
 
+
+<h2 id="query4"><div>Show all doctor information<a class="anchorjs-link " href="#query4" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
   <?php
   echo str_repeat('&nbsp;', 10);
   echo "<h5>MYSQL Query4 - Simple Query :Show all doctor information </h5>";
