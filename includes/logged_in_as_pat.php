@@ -20,7 +20,7 @@
   </ol>
 </nav>
 
-<div class="container-fluid" style="background-color:lightblue">
+<div class="container-fluid col-12 col-md-9 col-xl-8 py-md-3 bd-content" style="background-color:lightblue">
   <form action="pat_query/queries.php" method="post" style="margin:100px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Find Your Information with Patient ID" style="text-align:center;margin:10px" />
   </form>
