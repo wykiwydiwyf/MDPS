@@ -30,10 +30,10 @@
   </form>
 
     <form>
-    <input type="button" value="Project Proposal" class="btn btn-outline-info btn-lg float-left mr-5" onclick="window.location.href='/summary/summary.php'" />
+    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-left mr-5" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/er_diagram/er.php'" />
   </form>
 
-
+  
   <div class="container-fluid col-12 col-md-9 col-xl-8 py-md-3 bd-content" style="background-color:lightblue">
   <form action="includes/logged_in_as_doc.php" method="post" style="margin:200px">
     <input type="submit" class="btn btn-warning btn-lg btn-block" value="Log in as Doctor" style="text-align:center;margin:10px" />
