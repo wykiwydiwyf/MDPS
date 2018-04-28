@@ -28,10 +28,13 @@
   <div class="container-fluid col-12 col-md-9 col-xl-8 py-md-3 bd-content" style="background-color:lightblue">
   <h2 id="proposal"><div>INFS7901: Project Proposal<a class="anchorjs-link " href="#proposal" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
   <p>	In our project, a hospital Medical Data Processing System (MDPS) will be introduced as the domain of this project. In this system, patient’s medical data will be processed and stored to the hospital.
-	In this case, the patient’s diagnostic data will be simulated. Patients are composed of inpatients and outpatients, and inpatients will be specified with the length of stay. All patients have their own personal information, symptoms, and medical records. This information will be diagnosed by the doctor and diagnostic results will also be given. These results include what kind of disease the patient has, whether the patient needs to undergo surgery, and what kind of treatment patient needs to receive. At the same time, the diagnostician also needs to provide his name, age and id. All data will be stored and passed on to the department to which the doctors belong and will eventually be managed by the hospital.
-	In MDPS, users are divided into two categories: patients and doctors. Patients can log in and modify their own user information, symptoms and medical records. User logs in as a doctor will have access to all patients' data for further modification or deletion. Also, users of doctor can do the same operations with the diagnostic results. The MDPS can also help the doctor to query and analyze all the data which currently available, and these results can be graphically displayed to the doctor intuitively.
-	MySQL and PHP will be using to build MDPS in this project, and no any other special software or hardware will be used.
-</p>
+  </p>
+  <p>In this case, the patient’s diagnostic data will be simulated. Patients are composed of inpatients and outpatients, and inpatients will be specified with the length of stay. All patients have their own personal information, symptoms, and medical records. This information will be diagnosed by the doctor and diagnostic results will also be given. These results include what kind of disease the patient has, whether the patient needs to undergo surgery, and what kind of treatment patient needs to receive. At the same time, the diagnostician also needs to provide his name, age and id. All data will be stored and passed on to the department to which the doctors belong and will eventually be managed by the hospital.
+  </p>
+  <p>In MDPS, users are divided into two categories: patients and doctors. Patients can log in and modify their own user information, symptoms and medical records. User logs in as a doctor will have access to all patients' data for further modification or deletion. Also, users of doctor can do the same operations with the diagnostic results. The MDPS can also help the doctor to query and analyze all the data which currently available, and these results can be graphically displayed to the doctor intuitively.
+  </p>
+  <p>MySQL and PHP will be using to build MDPS in this project, and no any other special software or hardware will be used.
+  </p>
   </div>
 
 
