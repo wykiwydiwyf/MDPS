@@ -185,7 +185,7 @@ $visit_date="$year-$month-$dt";
 $sql  = "INSERT INTO patient_1(pat_id,pat_name,age,gender,address,visit_date,symptom) VALUES(NULL,'$pat_name','$age','$gender','$address','$visit_date','$symptom');";
 echo $T;
 
-if ($T = "1")
+if ($T > "0")
 {
   $sql .= "INSERT INTO inpatient(pat_id,hos_name,dur_in_hos) VALUES(LAST_INSERT_ID(),(SELECT hos_name FROM hospital WHERE hos_name = '$hos_name'),'$dur_in_hos')";
   echo $hos_name;
