@@ -52,6 +52,25 @@
       </select>
     </div>
     <div class="form-group">
+      <label for="form9">Hospital Name</label>
+      <select class="custom-select" name="hos_name" id="form9">
+      <?php
+$query = "SELECT hos_name
+from hospital
+";
+
+$result = mysqli_query($conn, $query);
+
+            ?>
+        <option selected="">Choose...</option>
+        <?php 
+          while ($row = mysqli_fetch_array($result)) {
+          echo "<option value=".$row["hos_name"].">".$row["hos_name"]."</option>";
+          }
+           ?>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="form4">Home Address</label>
       <input type="text" class="form-control" id="form4" name="address" placeholder="111 Hollywood Ave">
     </div>
