@@ -60,10 +60,10 @@
         <a class="nav-link active" href="#">Join Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/division_query/queries.php">Division Query</a>
+        <a class="nav-link" href="division_query/queries.php">Division Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/aggregation_query/queries.php">Aggregation Query</a>
+        <a class="nav-link" href="aggregation_query/queries.php">Aggregation Query</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="nested_query/queries.php">Nested Query With Grouping</a>
@@ -99,7 +99,7 @@
 
                     $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
                     from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
-                    where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
+                    where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
@@ -117,10 +117,11 @@
                     }
             }
             ?>
+
     </tbody>
+  </table>
   </div>
 </div>
-
 
   
 </main>
