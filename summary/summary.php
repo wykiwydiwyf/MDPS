@@ -2,18 +2,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>INFS7901-Tables</title>
   </head>
-<body>
+<body style="background-color:E7BFAA;">
 
 
-  <h1 style="color:navy;text-align:center;">INFS7901 Project: Medical Database Processing System(MDPS) </h1>
-
-
+<div align="center">
+<img class="mw-100" src="logo.png"style="width: 90%">
+</div>
 
 
 
   <form>
-    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
-    <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
+    <input type="button" value="GO BACK " class="btn btn-warning" onclick="history.go(-1);return false;" />
+    <input type="button" value="Home " class="btn btn-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
 
   <nav aria-label="breadcrumb">

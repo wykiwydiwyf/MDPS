@@ -12,8 +12,8 @@
 
 
   <form>
-    <input type="button" value="GO BACK " class="btn btn-outline-warning" onclick="history.go(-1);return false;" />
-    <input type="button" value="Home " class="btn btn-outline-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
+    <input type="button" value="GO BACK " class="btn btn-warning" onclick="history.go(-1);return false;" />
+    <input type="button" value="Home " class="btn btn-warning" onclick="window.location.href='https://yifei.uqcloud.net/MDPS/index.php'" />
   </form>
 
   <nav aria-label="breadcrumb">
@@ -27,13 +27,13 @@
 <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
 <div>
   <form>
-    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-left mb-5" onclick="window.location.href='er_diagram/er.php'" />
+    <input type="button" value="Show ER-Diagram" class="btn btn-outline-info btn-lg float-left mb-5 mt-5" onclick="window.location.href='er_diagram/er.php'" />
   </form>
   </div>
 <div>
   <form>
     
-    <input type="button" value=" Project Proposal " class="btn btn-outline-info btn-lg float-left mt-5" onclick="window.location.href='summary/summary.php'" />
+    <input type="button" value=" Project    Proposal " class="btn btn-outline-info btn-lg float-left mt-5" onclick="window.location.href='summary/summary.php'" />
   </form>
   </div>
 </div>
