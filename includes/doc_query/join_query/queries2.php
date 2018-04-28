@@ -30,42 +30,53 @@
         }
     ?>
 
-
-
-
-    <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/index.php">Home</a></li>
-    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/includes/logged_in_as_pat.php">Patient</a></li>
+    <li class="breadcrumb-item"><a href="https://yifei.uqcloud.net/MDPS/includes/logged_in_as_doc.php">Doctor</a></li>
     <li class="breadcrumb-item active" aria-current="page">Query</li>
     </ol>
     </nav>
 
 
-  <?php  
+<div class="container-fluid row">
 
-  
-  echo str_repeat('&nbsp;', 10);
-  echo "<h5>MYSQL PAT_Simple_QUERY1</h5>";
-  echo "<h5>Look Up Patient Information</h5>";
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#query1">All Surgeries</a></li>
+<li class="toc-entry toc-h2"><a href="#query2">Show who is/are the doctors for each patients</a></li>
+<li class="toc-entry toc-h2"><a href="#query3">Show all inpatient’s information who hasn’t been signed with a doctor</a></li>
+<li class="toc-entry toc-h2"><a href="#query4">Show all doctor information</a></li>
 
-    ?>
+</ul>
+</div>
 
- <form method="POST" style="text-align:left;margin-bottom:300px,margin-top:200px,margin-left:100px;margin-right:600px" >
-    <div class="form-group">
-      <label for="form1">Patient's ID</label>
-      <input type="text" class="form-control" id="form1" name="pat_id" placeholder="Input your patient ID here">
-    </div>
-    <input type="submit" name="query1" class="btn btn-primary btn-lg" value="Show Info" style="text-align:right;margin:10px" />
-  </form>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-
-      <?php  
-  echo str_repeat('&nbsp;', 500);
-
-    ?>
-
-  <table class="table thead-light table-bordered">
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Join Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/division_query/queries.php">Division Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/aggregation_query/queries.php">Aggregation Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="nested_query/queries.php">Nested Query With Grouping</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+  <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <form action="" method="post">
+    <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+    </form>
+    <table class="table thead-light table-bordered">
     <thead>
       <tr>
         <th scope="col">Patient ID</th>
@@ -81,15 +92,14 @@
     </thead>
 
     <tbody id="queryTable1">
-
       <?php
         $pat_id=$_POST['pat_id'];
 
             if(isset($_POST["query1"]) && $_POST["query1"] != "") {
 
-                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
-                    from patient_1 p1,outpatient op,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
-                    where p1.pat_id = op.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
+                    $query = "select p1.pat_id,p1.visit_date,pd1.date,p1.symptom,ip.dur_in_hos,pd2.doc_id,d.doc_name,pd2.disease,pd2.treatment
+                    from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd2.doc_id and p1.pat_id = '$pat_id'";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
@@ -98,7 +108,7 @@
                         echo "<td>".$rows["doc_id"]."</td>";
                         echo "<td>".$rows["doc_name"]."</td>";
                         echo "<td>".$rows["symptom"]."</td>";
-                        echo "<td>",N/A,"</td>";
+                        echo "<td>".$rows["dur_in_hos"]."</td>";
                         echo "<td>".$rows["disease"]."</td>";
                         echo "<td>".$rows["treatment"]."</td>";
                         echo "<td>".$rows["visit_date"]."</td>";
@@ -108,12 +118,19 @@
             }
             ?>
     </tbody>
-  </table>
+  </div>
+</div>
 
 
+  
+</main>
+
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
+
