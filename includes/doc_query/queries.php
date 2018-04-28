@@ -172,7 +172,6 @@ where pd1.pat_id= p1.pat_id))
                         echo "<td>".$rows["age"]."</td>";
                         echo "<td>".$rows["gender"]."</td>";
                         echo "<td>".$rows["address"]."</td>";
-                        echo "<td>".$rows["hos_name"]."</td>";
                         echo "</tr>";
                     }
             }
