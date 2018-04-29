@@ -43,10 +43,12 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#query1">All Surgeries</a></li>
-<li class="toc-entry toc-h2"><a href="#query2">Show who is/are the doctors for each patients</a></li>
-<li class="toc-entry toc-h2"><a href="#query3">Show all inpatient’s information who hasn’t been signed with a doctor</a></li>
-<li class="toc-entry toc-h2"><a href="#query4">Show all doctor information</a></li>
+            <li class="toc-entry toc-h5 mt-3 mb-3 active"><a href="#">FUNCTION:</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries.php">All Surgeries Information</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries2.php">All patient Information</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/division_query/queries1.php">Patient Diagnosed by All Doctors</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/aggregation_query/queries1.php">Inpatient Who Stay Longest Time</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/nested_query/queries1.php">Doctor Has Least Patient</a></li>
 
 </ul>
 </div>

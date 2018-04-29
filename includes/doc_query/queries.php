@@ -43,7 +43,7 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h4 mt-3 mb-3 active"><a href="#">Index:</a></li>
+<li class="toc-entry toc-h5 mt-3 mb-3 active"><a href="#">FUNCTION:</a></li>
 <li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries.php">All Surgeries Information</a></li>
 <li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries2.php">All patient Information</a></li>
 <li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/division_query/queries1.php">Patient Diagnosed by All Doctors</a></li>
