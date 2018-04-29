@@ -57,7 +57,7 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Join Query</a>
+    <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
@@ -66,52 +66,16 @@
         <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
+      <a class="nav-link active" href="#">Nested Query With Grouping</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-  <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find all surgeries, and show all surgeries information</p>
+    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find information for all patients including inpatient and outpatient</p>
-    <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries2.php';"/>
-    </form>
-    <table class="table thead-light table-bordered" >
-    <thead>
-      <tr>
-        <th scope="col">Patient ID</th>
-        <th scope="col">Patient Name</th>
-        <th scope="col">Doctor ID</th>
-        <th scope="col">Doctor Name</th>
-        <th scope="col">Disease</th>
-        <th scope="col">Treatment</th>
-      </tr>
-    </thead>
-
-    <tbody id="queryTable1">
-      <?php
-                    $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
-                    $result = mysqli_query($conn, $query);
-                    
-                    while ($rows = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>".$rows["pat_id"]."</td>";
-                        echo "<td>".$rows["pat_name"]."</td>";
-                        echo "<td>".$rows["doc_id"]."</td>";
-                        echo "<td>".$rows["doc_name"]."</td>";
-                        echo "<td>".$rows["disease"]."</td>";
-                        echo "<td>".$rows["treatment"]."</td>";
-                        echo "</tr>";
-                    }
-            ?>
-
-    </tbody>
-  </table>
   </div>
 </div>
 

@@ -74,7 +74,7 @@
   <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find all surgeries, and show all surgeries information</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='/MDPS/includes/doc_query/queries.php';"/>
     </form>
     <table class="table thead-light table-bordered" >
     <thead>
