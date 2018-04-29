@@ -85,6 +85,8 @@
     <div class="input-group">
   </div>
   <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
   <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
     <button type="button" class="btn btn-success" onclick="location.href='queries1.php';"/>Min</button>
     <button type="button" class="btn btn-success" onclick="location.href='queries1.php';"/>Max</button>
