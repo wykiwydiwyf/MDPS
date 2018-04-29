@@ -43,11 +43,13 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h3 mt-3 mb-3"><a href="#queryj1">All Surgeries Information</a></li>
-<li class="toc-entry toc-h3 mt-3 mb-3"><a href="#queryj2">All patient Information</a></li>
-<li class="toc-entry toc-h3 mt-3 mb-3"><a href="#queryd1">Patient Diagnosed by All Doctors</a></li>
-<li class="toc-entry toc-h3 mt-3 mb-3"><a href="#querya1">Inpatient Who Stay Longest Time</a></li>
-<li class="toc-entry toc-h3 mt-3 mb-3"><a href="#queryn1">Doctor Has Least Patient</a></li>
+            <li class="nav-item">
+<li class="toc-entry toc-h4 mt-3 mb-3 active"><a href="#">Index:</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries.php">All Surgeries Information</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/join_query/queries2.php">All patient Information</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/division_query/queries1.php">Patient Diagnosed by All Doctors</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/aggregation_query/queries1.php">Inpatient Who Stay Longest Time</a></li>
+<li class="toc-entry toc-h3 mt-3 mb-3"><a href="/MDPS/includes/doc_query/nested_query/queries1.php">Doctor Has Least Patient</a></li>
 </ul>
 </div>
 
