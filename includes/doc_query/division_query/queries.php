@@ -80,11 +80,12 @@
     <thead>
       <tr>
       <th scope="col">Patient ID</th>
-        <th scope="col">Symptom</th>
-        <th scope="col">Disease</th>
-        <th scope="col">Treatment</th>
+        <th scope="col">Patient Name</th>
         <th scope="col">Visit Date</th>
-        <th scope="col">Diagnosis Date</th>
+        <th scope="col">AGE</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Symptom</th>
       </tr>
     </thead>
 
@@ -104,11 +105,12 @@
                     while ($rows = mysqli_fetch_array($result)) {
                       echo "<tr>";
                       echo "<td>".$rows["pat_id"]."</td>";
-                      echo "<td>".$rows["symptom"]."</td>";
-                      echo "<td>".$rows["disease"]."</td>";
-                      echo "<td>".$rows["treatment"]."</td>";
+                      echo "<td>".$rows["pat_name"]."</td>";
                       echo "<td>".$rows["visit_date"]."</td>";
-                      echo "<td>".$rows["date"]."</td>";
+                      echo "<td>".$rows["age"]."</td>";
+                      echo "<td>".$rows["gender"]."</td>";
+                      echo "<td>".$rows["address"]."</td>";
+                      echo "<td>".$rows["symptom"]."</td>";
                       echo "</tr>";
                     }
             ?>
