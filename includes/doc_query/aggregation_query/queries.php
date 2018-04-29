@@ -74,7 +74,7 @@
     <h5 id="query1"><div>Inpatient Who Stay Longest Time<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Among all the inpatients, find out day of stay for patient who stay longest.</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries2.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
     </tbody>

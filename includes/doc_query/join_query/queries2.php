@@ -71,12 +71,12 @@
     </ul>
   </div>
   <div class="card-body">
-  <h5 id="query1"><div>All Surgeries<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+  <h5 id="query1"><div>All Surgeries Information<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find all surgeries, and show all surgeries information</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
-    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <h5 id="query1"><div>Show all patient Information<a class="anchorjs-link " href="#queryj2" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find information for all patients including inpatient and outpatient</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='/MDPS/includes/doc_query/queries.php';"/>
