@@ -84,16 +84,15 @@
     <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
     <div class="input-group">
   </div>
-  <p>sadasdas</p>
-  <div class="btn-group mr-2" role="group"  aria-label="First group">
+  <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Min</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Max</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Ave</button>
   </div>
   <div class="input-group">
-    <div class="input-group-prepend">
+    <div class="input-group-prepend ml-5" >
       <div class="input-group-text" id="btnGroupAddon">Or</div>
-      <div class="btn-group mr-2" role="group" aria-label="First group">
+      <div class="btn-group ml-5" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Count</button>
   </div>
           <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
