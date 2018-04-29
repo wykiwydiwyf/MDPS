@@ -84,7 +84,7 @@
     <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
     <div class="input-group">
   </div>
-  <div class="btn-group mr-5 ml-auto" role="group"  aria-label="First group">
+  <div class="btn-group mr-5 ml-6" role="group"  aria-label="First group">
     <button type="button" class="btn btn-success" onclick="location.href='queries1.php';"/>Min</button>
     <button type="button" class="btn btn-success" onclick="location.href='queries1.php';"/>Max</button>
     <button type="button" class="btn btn-success" onclick="location.href='queries1.php';"/>Ave</button>
