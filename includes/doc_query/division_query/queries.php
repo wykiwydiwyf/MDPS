@@ -57,10 +57,10 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Join Query</a>
+    <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
+        <a class="nav-link active" href="#">Division Query</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
@@ -71,37 +71,45 @@
     </ul>
   </div>
   <div class="card-body">
-  <h5 id="query1"><div>Patient Diagnized by All Doctor<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find all surgeries, and show all surgeries information</p>
+  <h5 id="query1"><div>Patient Diagnosed by All Doctors<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find all patient who has been to diagnozed multiple times and diagnosed by all the doctors in hospital </p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
     <table class="table thead-light table-bordered" >
     <thead>
       <tr>
-        <th scope="col">Patient ID</th>
-        <th scope="col">Patient Name</th>
-        <th scope="col">Doctor ID</th>
-        <th scope="col">Doctor Name</th>
+      <th scope="col">Patient ID</th>
+        <th scope="col">Symptom</th>
         <th scope="col">Disease</th>
         <th scope="col">Treatment</th>
+        <th scope="col">Visit Date</th>
+        <th scope="col">Diagnosis Date</th>
       </tr>
     </thead>
 
     <tbody id="queryTable1">
       <?php
-                    $query = "SELECT p.pat_id,p.pat_name,d.doc_id,d.doc_name,pd2.disease,pd2.treatment from doctor as d, pat_doc_2 as pd2 ,patient_1 as p where d.doc_id = pd2.doc_id and p.pat_id = pd2.pat_id and pd2.if_surge = 1";
+                    $query = "SELECT *
+                    FROM patient_1 as p
+                    WHERE not EXISTS
+                        (SELECT d.doc_id
+                        FROM doctor as d
+                        WHERE NOT EXISTS(
+                            SELECT *
+                            FROM pat_doc_1 as pd
+                            WHERE p.pat_id=pd.pat_id and d.doc_id=pd.doc_id))";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>".$rows["pat_id"]."</td>";
-                        echo "<td>".$rows["pat_name"]."</td>";
-                        echo "<td>".$rows["doc_id"]."</td>";
-                        echo "<td>".$rows["doc_name"]."</td>";
-                        echo "<td>".$rows["disease"]."</td>";
-                        echo "<td>".$rows["treatment"]."</td>";
-                        echo "</tr>";
+                      echo "<tr>";
+                      echo "<td>".$rows["pat_id"]."</td>";
+                      echo "<td>".$rows["symptom"]."</td>";
+                      echo "<td>".$rows["disease"]."</td>";
+                      echo "<td>".$rows["treatment"]."</td>";
+                      echo "<td>".$rows["visit_date"]."</td>";
+                      echo "<td>".$rows["date"]."</td>";
+                      echo "</tr>";
                     }
             ?>
 
