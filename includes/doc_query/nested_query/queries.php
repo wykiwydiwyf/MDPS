@@ -81,13 +81,11 @@
 
     <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
-    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
     <div class="input-group">
-    <div class="input-group-prepend">
-      <div class="input-group-text" id="btnGroupAddon">Find the</div>
-    </div>
   </div>
-  <div class="btn-group mr-2" role="group" aria-label="First group">
+  <p>sadasdas</p>
+  <div class="btn-group mr-2" role="group"  aria-label="First group">
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Min</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Max</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Ave</button>
