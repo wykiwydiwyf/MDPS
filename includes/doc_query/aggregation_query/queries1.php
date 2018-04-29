@@ -80,6 +80,8 @@
     <thead>
       <tr>
         <th scope="col">Longest Day Stay</th>
+        <th scope="col">Longest Day Stay</th>
+        <th scope="col">Longest Day Stay</th>
       </tr>
     </thead>
 
@@ -93,7 +95,9 @@
                     
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
-                        echo "<td>".$rows["Max(ip.dur_in_hos)"]."</td>";
+                        echo "<td>".$rows["MAX(ip.dur_in_hos)"]."</td>";
+                        echo "<td>".$rows["MAX(dur_in_hos)"]."</td>";
+                        echo "<td>".$rows["ip.dur_in_hos"]."</td>";
                         echo "</tr>";
                     }
             ?>
