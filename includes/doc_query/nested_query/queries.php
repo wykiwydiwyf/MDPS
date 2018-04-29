@@ -78,6 +78,26 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
+
+    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text" id="btnGroupAddon">Find the</div>
+    </div>
+  </div>
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-secondary">Min</button>
+    <button type="button" class="btn btn-secondary">Max</button>
+    <button type="button" class="btn btn-secondary">Ave</button>
+    <button type="button" class="btn btn-secondary">Count</button>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text" id="btnGroupAddon">of Patient Age</div>
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
 
