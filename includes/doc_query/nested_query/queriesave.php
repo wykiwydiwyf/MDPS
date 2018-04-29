@@ -88,7 +88,7 @@
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
   <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
+  <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
     <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Max</button>
     <button type="button" class="btn btn-success" onclick="location.href='queriesave.php';"/>Ave</button>
   </div>
