@@ -73,12 +73,14 @@
     </ul>
   </div>
   <div class="card-body">
-    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
+    <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
     <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
     <div class="input-group">
     <div class="input-group-prepend">
@@ -89,11 +91,14 @@
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Min</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Max</button>
     <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Ave</button>
-    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Count</button>
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text" id="btnGroupAddon">of Patient Age</div>
+      <div class="input-group-text" id="btnGroupAddon">Or</div>
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Count</button>
+  </div>
+          <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
     </div>
   </div>
 </div>
