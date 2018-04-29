@@ -76,6 +76,27 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries2.php';"/>
     </form>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Longest Day Stay</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+                    $query = "select MAX(ip.dur_in_hos)
+                    from patient_1 p1,inpatient ip,pat_doc_1 pd1,pat_doc_2 pd2,doctor as d
+                    where p1.pat_id=ip.pat_id and p1.pat_id=pd1.pat_id and p1.pat_id=pd2.pat_id and d.doc_id = pd1.doc_id and d.doc_id = pd2.doc_id
+                    GROUP BY ip.hos_name";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["Max(ip.dur_in_hos)"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
 
     </tbody>
   </table>
