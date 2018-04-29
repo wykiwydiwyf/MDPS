@@ -60,10 +60,10 @@
     <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">Division Query</a>
+        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
+      <a class="nav-link active" href="#">Aggregation Query</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
