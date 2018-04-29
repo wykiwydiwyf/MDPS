@@ -79,7 +79,6 @@
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
-    <form action="" method="post">
     <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
     <div class="input-group">
     <div class="input-group-prepend">
@@ -87,11 +86,10 @@
     </div>
   </div>
   <div class="btn-group mr-2" role="group" aria-label="First group">
-
-    <button type="button" name="query1" class="btn btn-secondary" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>Min</button>
-    <button type="button" name="query1" class="btn btn-secondary" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>Max</button>
-    <button type="button" name="query1" class="btn btn-secondary" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>Ave</button>
-    <button type="button" name="query1" class="btn btn-secondary" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>Count</button>
+    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Min</button>
+    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Max</button>
+    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Ave</button>
+    <button type="button" class="btn btn-secondary" onclick="location.href='queries1.php';"/>Count</button>
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
@@ -99,7 +97,7 @@
     </div>
   </div>
 </div>
-</form>
+
 
   </div>
 </div>
