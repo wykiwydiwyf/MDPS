@@ -74,8 +74,49 @@
   <h5 id="query1"><div>Patient Diagnosed by All Doctors<a class="anchorjs-link " href="#query1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find all patient who has been to diagnozed multiple times and diagnosed by all the doctors in hospital </p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+      <th scope="col">Patient ID</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Visit Date</th>
+        <th scope="col">AGE</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Symptom</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+                    $query = "SELECT *
+                    FROM patient_1 as p
+                    WHERE not EXISTS
+                        (SELECT d.doc_id
+                        FROM doctor as d
+                        WHERE NOT EXISTS(
+                            SELECT *
+                            FROM pat_doc_1 as pd
+                            WHERE p.pat_id=pd.pat_id and d.doc_id=pd.doc_id))";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                      echo "<tr>";
+                      echo "<td>".$rows["pat_id"]."</td>";
+                      echo "<td>".$rows["pat_name"]."</td>";
+                      echo "<td>".$rows["visit_date"]."</td>";
+                      echo "<td>".$rows["age"]."</td>";
+                      echo "<td>".$rows["gender"]."</td>";
+                      echo "<td>".$rows["address"]."</td>";
+                      echo "<td>".$rows["symptom"]."</td>";
+                      echo "</tr>";
+                    }
+            ?>
+
+    </tbody>
+  </table>
   </div>
 </div>
 
