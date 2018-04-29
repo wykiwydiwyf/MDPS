@@ -79,6 +79,7 @@
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
+    <form action="" method="post">
     <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
     <div class="input-group">
     <div class="input-group-prepend">
@@ -86,10 +87,11 @@
     </div>
   </div>
   <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">Min</button>
-    <button type="button" class="btn btn-secondary">Max</button>
-    <button type="button" class="btn btn-secondary">Ave</button>
-    <button type="button" class="btn btn-secondary">Count</button>
+
+    <input type="button" name="query1" class="btn btn-primary" value="Min" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Max" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Ave" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Count" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
@@ -97,6 +99,7 @@
     </div>
   </div>
 </div>
+</form>
 
   </div>
 </div>
