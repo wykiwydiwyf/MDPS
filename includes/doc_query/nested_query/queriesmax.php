@@ -54,7 +54,23 @@
 </div>
 
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Join Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
+      </li>
+    </ul>
+  </div>
   <div class="card-body">
     <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
