@@ -58,7 +58,7 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Join Query</a>
+    <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
@@ -68,6 +68,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Nested Query With Grouping</a>
       </li>
     </ul>
   </div>
