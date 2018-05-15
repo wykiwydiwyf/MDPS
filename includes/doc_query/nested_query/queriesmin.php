@@ -79,25 +79,22 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-  </div>
-  <div class="card-body">
+
     <h5 id="query1"><div>Doctor Has Most Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed most patients and show his information</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-  </div>
-  <div class="card-body">
+
     <h5 id="query1"><div>Average Patient Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the average number of patients doctor diognised</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-  </div>
-  <div class="card-body">
+
     <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
-    <div class="input-group" style="padding-left: 0.375em;">
+    <div class="input-group ml-5" style="padding-left: 0.375em;">
     <div class="input-group-prepend ml-5" >
       <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon">
       <div class="btn-group " role="group" aria-label="First group">
