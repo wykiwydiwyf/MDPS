@@ -55,55 +55,46 @@
 
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-    <li class="nav-item">
-    <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link active" href="#">Nested Query With Grouping</a>
-      </li>
-    </ul>
-  </div>
   <div class="card-body">
     <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-
-    <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
-    <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
-    <div class="input-group">
   </div>
-
-
-
-  <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-    <div class="input-group-text" id="btnGroupAddon">Or</div>
-    <h5 id="query1"><div>Doctor Has </a></div></h5>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Least</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Most</button>
-    <h5 id="query1"><div>Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <div class="card-body">
+    <h5 id="query1"><div>Doctor Has Most Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
   </div>
-  <div class="input-group">
-    <div class="input-group-prepend ml-5" >
-      <div class="input-group-text" id="btnGroupAddon">Or</div>
-      <div class="btn-group " role="group" aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriescount.php';"/>Count</button>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <div class="card-body">
+    <h5 id="query1"><div>Average Patient Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
   </div>
-          <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
-    </div>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <div class="card-body">
+    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
   </div>
-</div>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
 
 
   </div>
