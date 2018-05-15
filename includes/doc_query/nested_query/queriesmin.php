@@ -94,7 +94,7 @@
 
     <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
-    <form action="" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" method="post">
+    <form action="" class="row justify-content-md-center col col-lg-2" method="post">
     <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
     </form>
     <form action="" method="post">
