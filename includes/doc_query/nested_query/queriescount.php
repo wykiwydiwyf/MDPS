@@ -83,34 +83,7 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
-    <table class="table thead-light table-bordered" >
-    <thead>
-      <tr>
-        <th scope="col">Doctor ID</th>
-        <th scope="col">Number of Patient</th>
-      </tr>
-    </thead>
 
-    <tbody id="queryTable1">
-      <?php
-             $doc_id=$_POST['doc_id'];
-
-                    $query = "SELECT doc_id,COUNT(*) as pat_num
-                    FROM `pat_doc_1` 
-                    GROUP BY doc_id
-                    HAVING doc_id = $doc_id";
-                    $result = mysqli_query($conn, $query);
-                    
-                    while ($rows = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>".$rows["doc_id"]."</td>";
-                        echo "<td>".$rows["pat_num"]."</td>";
-                        echo "</tr>";
-                    }
-            ?>
-
-    </tbody>
-  </table>
     <h5 id="query1"><div>Average Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the average number of patients doctor diognised</p>
     <form action="" method="post">
@@ -128,6 +101,34 @@
       <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriescount.php';"/>
     </form>
     </div>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Number of Patient</th>
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+             $doc_id=$_POST['doc_id'];
+
+                    $query = "SELECT doc_id,COUNT(*) as pat_num
+                    FROM `pat_doc_1` 
+                    GROUP BY doc_id
+                    HAVING doc_id = '$doc_id'";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["pat_num"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
+
+    </tbody>
+  </table>
   </div>
   </div>
 
