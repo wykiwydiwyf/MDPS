@@ -100,6 +100,11 @@
       <div class="btn-group " role="group" aria-label="First group">
     <button type="button" class="btn btn-primary" onclick="location.href='queriescount.php';"/>Count</button>
     </div>
+    <form action="" method="post">
+    <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
+
 
     </div>
   </div>
