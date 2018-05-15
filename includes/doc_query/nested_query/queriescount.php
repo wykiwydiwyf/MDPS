@@ -86,9 +86,8 @@
     <table class="table thead-light table-bordered" >
     <thead>
       <tr>
-        <th scope="col">Max Number of Patient</th>
-
-
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Number of Patient</th>
       </tr>
     </thead>
 
@@ -96,16 +95,16 @@
       <?php
              $doc_id=$_POST['doc_id'];
 
-                    $query = "SELECT max(pat_num)
-                    FROM
-                    (SELECT doc_id,COUNT(*) as pat_num
+                    $query = "SELECT doc_id,COUNT(*) as pat_num
                     FROM `pat_doc_1` 
-                    GROUP BY doc_id) t";
+                    GROUP BY doc_id
+                    HAVING doc_id = $doc_id";
                     $result = mysqli_query($conn, $query);
                     
                     while ($rows = mysqli_fetch_array($result)) {
                         echo "<tr>";
-                        echo "<td>".$rows["max(pat_num)"]."</td>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["pat_num"]."</td>";
                         echo "</tr>";
                     }
             ?>
