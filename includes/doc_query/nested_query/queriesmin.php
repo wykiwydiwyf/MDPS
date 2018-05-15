@@ -95,20 +95,17 @@
     </form>
   </div>
   <div class="card-body">
-
-      <div class="input-group">
-    <div class="input-group-prepend ml-5" >
     <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <div class="input-group">
+    <div class="input-group-prepend ml-5" >
+      <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon">
       <div class="btn-group " role="group" aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriescount.php';"/>Count</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='queriescount.php';"/>Count</button>
     </div>
-          <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon">
+
     </div>
   </div>
-    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
-    <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
-    </form>
   </div>
 <table class="table thead-light table-bordered" >
     <thead>
