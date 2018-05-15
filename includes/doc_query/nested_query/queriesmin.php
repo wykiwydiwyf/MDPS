@@ -96,7 +96,7 @@
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
 
     <form action="" method="post">
-      <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      <input type="text" class="form-control col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
       <div class="btn-group " role="group" aria-label="First group">
       <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriescount.php';"/>
     </form>
