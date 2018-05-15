@@ -54,7 +54,6 @@
 </div>
 
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
@@ -68,40 +67,68 @@
         <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link active" href="#">Nested Query With Grouping</a>
+        <a class="nav-link active" href="#">Nested Query With Grouping</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <h5 id="query1"><div>Minium Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesmin.php';"/>
     </form>
 
-    <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
-    <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
-    <div class="input-group">
-  </div>
-  <p class="mr-5 ml-5"></p>
-  <p class="mr-5 ml-5"></p>
-  <p class="mr-5 ml-5"></p>
-  <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-  <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Max</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesave.php';"/>Ave</button>
-  </div>
-  <div class="input-group">
-    <div class="input-group-prepend ml-5" >
-      <div class="input-group-text" id="btnGroupAddon">Or</div>
+    <h5 id="query1"><div>Maxium Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed most patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
+    </form>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Maxium Number of Patient</th>
+
+
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+                    $query = "SELECT max(pat_num)
+                    FROM
+                    (SELECT doc_id,COUNT(*) as pat_num
+                    FROM `pat_doc_1` 
+                    GROUP BY doc_id) t";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["max(pat_num)"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
+
+    </tbody>
+  </table>
+    <h5 id="query1"><div>Average Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the average number of patients doctor diognised</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
+    </form>
+
+    <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
+    <div class="row justify-content-md-center">
+    <form action="" method="post">
+      <div class="col col-lg-auto">
+      <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      </div>
       <div class="btn-group " role="group" aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriescount.php';"/>Count</button>
-  </div>
-          <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
+      <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriescount.php';"/>
+    </form>
     </div>
   </div>
-</div>
+  </div>
 
 
   </div>
