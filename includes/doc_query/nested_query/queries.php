@@ -85,13 +85,14 @@
     <div class="input-group">
   </div>
 
-  <div class="input-group-text" id="btnGroupAddon">Or</div>
+
 
   <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Max</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesave.php';"/>Ave</button>
+    <div class="input-group-text" id="btnGroupAddon">Or</div>
+    <h5 id="query1"><div>Doctor Has </a></div></h5>
+    <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Least</button>
+    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Most</button>
+    <h5 id="query1"><div>Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
   </div>
   <div class="input-group">
     <div class="input-group-prepend ml-5" >
