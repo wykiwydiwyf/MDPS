@@ -79,22 +79,14 @@
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
+
   </div>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
-  <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Max</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesave.php';"/>Ave</button>
-  </div>
-  <div class="input-group">
-    <div class="input-group-prepend ml-5" >
-      <div class="input-group-text" id="btnGroupAddon">Or</div>
-      <div class="btn-group " role="group" aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriescount.php';"/>Count</button>
-  </div>
-          <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
+
+
+
     </div>
   </div>
 </div>
