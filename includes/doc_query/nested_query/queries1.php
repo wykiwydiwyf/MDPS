@@ -73,37 +73,45 @@
     </ul>
   </div>
   <div class="card-body">
-    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " href="#queryn1" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
+    <table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Age</th>
 
-    <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
-    <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
-    <div class="input-group">
-  </div>
-  <p class="mr-5 ml-5"></p>
-  <p class="mr-5 ml-5"></p>
-  <p class="mr-5 ml-5"></p>
-  <div class="btn-group mr-5 ml-5" role="group"  aria-label="First group">
-  <button type="button" class="btn btn-success" onclick="location.href='queriesmin.php';"/>Min</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesmax.php';"/>Max</button>
-    <button type="button" class="btn btn-success" onclick="location.href='queriesave.php';"/>Ave</button>
-  </div>
-  <div class="input-group">
-    <div class="input-group-prepend ml-5" >
-      <div class="input-group-text" id="btnGroupAddon">Or</div>
-      <div class="btn-group " role="group" aria-label="First group">
-    <button type="button" class="btn btn-success" onclick="location.href='queriescount.php';"/>Count</button>
-  </div>
-          <input type="text" class="form-control" placeholder="Input age here" name="age" aria-label="Input age" aria-describedby="btnGroupAddon">
-    </div>
-  </div>
-</div>
+      </tr>
+    </thead>
 
+    <tbody id="queryTable1">
+      <?php
+                    $query = "SELECT *
+                    FROM doctor
+                    WHERE doc_id=(
+                    SELECT doc_id
+                    FROM pat_doc_1
+                    GROUP BY doc_id
+                    HAVING COUNT(*) >= ALL(SELECT COUNT(*)
+                    FROM pat_doc_1
+                    GROUP BY doc_id))";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["age"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
 
+    </tbody>
+  </table>
   </div>
 </div>
 
