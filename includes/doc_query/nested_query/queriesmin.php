@@ -102,7 +102,40 @@
     </div>
   </div>
 </div>
+<table class="table thead-light table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Age</th>
 
+      </tr>
+    </thead>
+
+    <tbody id="queryTable1">
+      <?php
+                    $query = "SELECT *
+                    FROM doctor
+                    WHERE doc_id=(
+                    SELECT doc_id
+                    FROM pat_doc_1
+                    GROUP BY doc_id
+                    HAVING COUNT(*) >= ALL(SELECT COUNT(*)
+                    FROM pat_doc_1
+                    GROUP BY doc_id))";
+                    $result = mysqli_query($conn, $query);
+                    
+                    while ($rows = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>".$rows["doc_id"]."</td>";
+                        echo "<td>".$rows["doc_name"]."</td>";
+                        echo "<td>".$rows["age"]."</td>";
+                        echo "</tr>";
+                    }
+            ?>
+
+    </tbody>
+  </table>
 
   </div>
 </div>

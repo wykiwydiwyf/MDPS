@@ -79,10 +79,6 @@
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
 
-    <h5 id="query1"><div>Patients Age<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the minimun/maximun/average of patients age or count how many people in this age</p>
-    <div class="btn-toolbar mb-3" role="toolbar" style="padding-left: 0.375em;" aria-label="Toolbar with button groups">
-    <div class="input-group">
   </div>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
