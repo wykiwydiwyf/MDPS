@@ -55,6 +55,24 @@
 
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+    <li class="nav-item">
+    <a class="nav-link" href="/MDPS/includes/doc_query/queries.php">Join Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/division_query/queries.php">Division Query</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link active" href="#">Nested Query With Grouping</a>
+      </li>
+    </ul>
+  </div>
+
   <div class="card-body">
     <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
@@ -67,7 +85,7 @@
   <p class="mr-5 ml-5"></p>
   <div class="card-body">
     <h5 id="query1"><div>Doctor Has Most Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <p class="card-text">Find the doctor who diagnosed most patients and show his information</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
@@ -77,7 +95,7 @@
   <p class="mr-5 ml-5"></p>
   <div class="card-body">
     <h5 id="query1"><div>Average Patient Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <p class="card-text">Find the average number of patients doctor diognised/p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
@@ -95,7 +113,6 @@
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
-
 
   </div>
 </div>
