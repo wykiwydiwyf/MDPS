@@ -96,7 +96,7 @@
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
     <div class="row justify-content-md-center">
     <form action="" method="post">
-      <div class="col col-lg-2">
+      <div class="col col-lg-auto">
       <input type="text" class="form-control" placeholder="Input doctor ID here" name="age" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
       </div>
       <div class="btn-group " role="group" aria-label="First group">
