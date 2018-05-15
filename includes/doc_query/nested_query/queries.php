@@ -67,9 +67,6 @@
         <a class="nav-link" href="/MDPS/includes/doc_query/aggregation_query/queries.php">Aggregation Query</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/MDPS/includes/doc_query/nested_query/queries.php">Nested Query With Grouping</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link active" href="#">Nested Query With Grouping</a>
       </li>
     </ul>
