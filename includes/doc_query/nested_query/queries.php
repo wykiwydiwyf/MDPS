@@ -78,13 +78,40 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
     </form>
-
-
   </div>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
   <p class="mr-5 ml-5"></p>
-
+  <div class="card-body">
+    <h5 id="query1"><div>Doctor Has Most Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
+  </div>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <div class="card-body">
+    <h5 id="query1"><div>Average Patient Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
+  </div>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <div class="card-body">
+    <h5 id="query1"><div>Doctor Has Least Patient<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <form action="" method="post">
+    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries1.php';"/>
+    </form>
+  </div>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
+  <p class="mr-5 ml-5"></p>
 
 
     </div>
