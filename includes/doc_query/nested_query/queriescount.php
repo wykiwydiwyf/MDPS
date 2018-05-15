@@ -100,6 +100,8 @@
       <div class="btn-group " role="group" aria-label="First group">
       <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
+    </div>
+
     <table class="table thead-light table-bordered" >
     <thead>
       <tr>
@@ -134,8 +136,6 @@
 
     </tbody>
   </table>
-
-    </div>
   </div>
   </div>
 
