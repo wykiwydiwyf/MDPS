@@ -83,16 +83,24 @@ input#form8 {
       <input type="text" class="form-control" id="form2" name="age" placeholder="Age">
     </div>
     <div class="form-group">
+      <div>
       <label for="form3">Gender</label>
+      </div>
+      <div>
       <select class="custom-select" name="gender" id="form3">
         <option selected="">Choose...</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
+      </div>
     </div>
     <div class="form-group">
+      <div>
       <label for="form9">Hospital Name</label>
+      </div>
+      <div>
       <select class="custom-select" name="hos_name" id="form9">
+      </div>
       <?php
 $query = "SELECT hos_name
 from hospital
