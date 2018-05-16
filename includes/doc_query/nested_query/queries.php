@@ -72,18 +72,18 @@
     </ul>
   </div>
   <div class="card-body">
-    <h5 id="query1"><div>Minium Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the doctor who diagnosed least number of patients and show his information</p>
+    <h5 id="query1"><div>Minimum Number of Patient Diagnosed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the minimum number of patients doctor diognised</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesmin.php';"/>
     </form>
 
-    <h5 id="query1"><div>Maxium Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
-    <p class="card-text">Find the doctor who diagnosed most patients and show his information</p>
+    <h5 id="query1"><div>Maximum Number of Patient Diagnosed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <p class="card-text">Find the maximum number of patients doctor diognised</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesmax.php';"/>
     </form>
-    <h5 id="query1"><div>Average Number of Patient Diagnosed by One Doctor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
+    <h5 id="query1"><div>Average Number of Patient Diagnosed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the average number of patients doctor diognised</p>
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
