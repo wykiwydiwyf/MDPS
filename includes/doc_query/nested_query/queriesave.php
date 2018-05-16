@@ -2,11 +2,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>INFS7901-Tables</title>
 <style>
-table {
+table#t01 {
     width:50%;
     align: center;
 }
-table, th, td {
+table#t01, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
