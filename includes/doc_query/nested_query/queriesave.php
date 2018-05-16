@@ -3,7 +3,8 @@
     <title>INFS7901-Tables</title>
 <style>
 table {
-    width:100%;
+    width:50%;
+    align: center;
 }
 table, th, td {
     border: 1px solid black;
@@ -18,10 +19,6 @@ table#t01 tr:nth-child(even) {
 }
 table#t01 tr:nth-child(odd) {
    background-color: #fff;
-}
-table#t01 th {
-    background-color: black;
-    color: white;
 }
 </style>
   </head>
