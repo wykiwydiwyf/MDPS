@@ -8,16 +8,16 @@ input#form1 {
 input#form2 {
     width:auto;
 }
-input#form3 {
+select#form3 {
     width:auto;
 }
 input#form4 {
     width:auto;
 }
-input#form7 {
+select#form7 {
     width:auto;
 }
-input#form9 {
+select#form9 {
     width:auto;
 }
 input#form8 {
