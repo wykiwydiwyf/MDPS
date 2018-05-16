@@ -89,8 +89,7 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
     </form>
-    <div class="col col-lg-auto">
-    <table class="table thead-light table-bordered " >
+    <table class="table thead-light table-bordered" style="width:50% background-color: #f1f1c1" >
     <thead>
       <tr>
         <th scope="col">Average Number of Patient</th>
