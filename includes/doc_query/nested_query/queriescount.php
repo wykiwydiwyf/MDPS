@@ -93,13 +93,15 @@
     <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
     <div class="row justify-content-md-center">
-    <form action="" method="post">
+
       <div class="col col-lg-auto">
-      <input type="text" class="form-control" placeholder="Input doctor ID here" name="doc_id" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      <form action="" method="post">
+      <input type="text" class="form-control" placeholder="Input doctor ID here" id="form1" name="doc_id" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      </form>
       </div>
       <div class="btn-group " role="group" aria-label="First group">
       <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
-    </form>
+
     </div>
     <table class="table thead-light table-bordered" >
     <thead>
