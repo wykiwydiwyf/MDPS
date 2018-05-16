@@ -4,7 +4,6 @@
 <style>
 table#t01 {
     width:50%;
-    align: center;
 }
 table#t01, th, td {
     border: 1px solid black;
@@ -109,7 +108,7 @@ table#t01 tr:nth-child(odd) {
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
     </form>
-    <table class="table thead-light table-bordered" id="t01">
+    <table class="table thead-light table-bordered" id="t01" align="center">
     <thead>
       <tr>
         <th scope="col">Average Number of Patient</th>
