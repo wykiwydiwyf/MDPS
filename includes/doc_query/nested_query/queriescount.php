@@ -97,10 +97,11 @@
       <div class="col col-lg-auto">
       <form action="" method="post">
       <input type="text" class="form-control" placeholder="Input doctor ID here" id="form1" name="doc_id" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
       </form>
       </div>
       <div class="btn-group " role="group" aria-label="First group">
-      <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
+
 
     </div>
     <table class="table thead-light table-bordered" >
