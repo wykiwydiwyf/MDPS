@@ -1,6 +1,25 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>INFS7901-Tables</title>
+    <style>
+table#t01 {
+    width:auto;
+}
+table#t01, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+</style>
   </head>
 <body style="background-color:E7BFAA;">
 
@@ -78,7 +97,7 @@
     <form action="" method="post">
     <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queries.php';"/>
     </form>
-    <table class="table thead-light table-bordered" >
+    <table class="table thead-light table-bordered" id="t01" align="center">
     <thead>
       <tr>
       <th scope="col">Patient ID</th>
