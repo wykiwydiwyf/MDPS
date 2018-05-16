@@ -123,6 +123,8 @@ table#t01 tr:nth-child(odd) {
 
 
     </div>
+    </div>
+    </div>
     <table class="table thead-light table-bordered" id="t01" align="center">
     <thead>
       <tr>
