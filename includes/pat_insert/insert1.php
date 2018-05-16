@@ -129,12 +129,16 @@ $result = mysqli_query($conn, $query);
       <input type="text" class="form-control" id="form6" name="symptom" placeholder="Symptom">
     </div>
     <div class="form-group">
+      <div>
       <label for="form7">Inpatient or Outpatient</label>
+      </div>
+      <div>
       <select class="custom-select" name="T" id="form7">
         <option selected="">Choose...</option>
         <option value="1">Inpatient</option>
         <option value="0">Outpatient</option>
       </select>
+      </div>
     </div>
     <div class="form-group">
       <label for="form8">How Many Days You Expect to Stay in Hospital</label>
