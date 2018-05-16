@@ -3,7 +3,7 @@
     <title>INFS7901-Tables</title>
 <style>
 table#t01 {
-    width:50%;
+    width:auto;
 }
 table#t01, th, td {
     border: 1px solid black;
