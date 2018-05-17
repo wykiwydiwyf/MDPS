@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2018 at 11:56 AM
+-- Generation Time: May 16, 2018 at 05:10 AM
 -- Server version: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -113,7 +113,58 @@ CREATE TABLE `hospital` (
 --
 
 INSERT INTO `hospital` (`hos_name`, `address`) VALUES
-('Little Rabbit Hospital', 'No1 Delaware Ave');
+('Little Bird Hospital', '8 Graedel Terrace'),
+('Little Cat Hospital', '8 Blaine Street'),
+('Little Monkey Hospital', '5 Almo Circle'),
+('Little Rabbit Hospital', '1 Delaware Avenue'),
+('Little Sheep Hospital', '9 Hudson Crossing');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inpatient`
+--
+
+CREATE TABLE `inpatient` (
+  `pat_id` int(11) NOT NULL,
+  `hos_name` varchar(200) DEFAULT NULL,
+  `dur_in_hos` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `inpatient`
+--
+
+INSERT INTO `inpatient` (`pat_id`, `hos_name`, `dur_in_hos`) VALUES
+(3, 'Little Rabbit Hospital', 7),
+(4, 'Little Rabbit Hospital', 3),
+(7, 'Little Rabbit Hospital', 4),
+(9, 'Little Rabbit Hospital', 21),
+(10, 'Little Rabbit Hospital', 17),
+(11, 'Little Rabbit Hospital', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `outpatient`
+--
+
+CREATE TABLE `outpatient` (
+  `pat_id` int(11) NOT NULL,
+  `hos_name` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `outpatient`
+--
+
+INSERT INTO `outpatient` (`pat_id`, `hos_name`) VALUES
+(1, 'Little Rabbit Hospital'),
+(2, 'Little Rabbit Hospital'),
+(5, 'Little Rabbit Hospital'),
+(6, 'Little Rabbit Hospital'),
+(8, 'Little Rabbit Hospital'),
+(12, 'Little Rabbit Hospital');
 
 -- --------------------------------------------------------
 
@@ -123,59 +174,31 @@ INSERT INTO `hospital` (`hos_name`, `address`) VALUES
 
 CREATE TABLE `patient_1` (
   `pat_id` int(11) NOT NULL,
-  `hos_name` varchar(200) NOT NULL,
   `visit_date` date DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `pat_name` varchar(200) DEFAULT NULL,
   `gender` varchar(200) DEFAULT NULL,
-  `address` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `address` varchar(200) DEFAULT NULL,
+  `symptom` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `patient_1`
 --
 
-INSERT INTO `patient_1` (`pat_id`, `hos_name`, `visit_date`, `age`, `pat_name`, `gender`, `address`) VALUES
-(1, 'Little Rabbit Hospital', '2005-07-02', 80, 'Ronnie Adamsen', 'Male', '78 Ronald Regan Alley'),
-(2, 'Little Rabbit Hospital', '1998-07-03', 22, 'Marlyn Bloys', 'Male', '43381 Meadow Vale Center'),
-(3, 'Little Rabbit Hospital', '2008-02-11', 51, 'Darell Cabell', 'Female', '947 Springs Plaza'),
-(4, 'Little Rabbit Hospital', '2014-04-06', 18, 'Cornie Brewood', 'Male', '31314 Basil Lane'),
-(5, 'Little Rabbit Hospital', '2012-11-26', 27, 'Barth Gullifant', 'Male', '63257 Sunbrook Crossing'),
-(6, 'Little Rabbit Hospital', '2004-06-16', 39, 'Xerxes Vettore', 'Female', '400 Granby Plaza'),
-(7, 'Little Rabbit Hospital', '2015-04-03', 77, 'Justus Isacoff', 'Male', '38069 Cottonwood Street'),
-(8, 'Little Rabbit Hospital', '2007-01-14', 48, 'Lu Polotti', 'Female', '43170 Arrowood Parkway'),
-(9, 'Little Rabbit Hospital', '1998-02-19', 31, 'Steffen Beat', 'Female', '2 Mifflin Court'),
-(10, 'Little Rabbit Hospital', '2014-09-22', 47, 'Nickie Yakunikov', 'Male', '529 Meadow Vale Drive');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patient_2`
---
-
-CREATE TABLE `patient_2` (
-  `pat_id` int(11) NOT NULL,
-  `hos_name` varchar(200) NOT NULL,
-  `symptom` varchar(200) DEFAULT NULL,
-  `dur_in_hos` int(11) DEFAULT NULL,
-  `T` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `patient_2`
---
-
-INSERT INTO `patient_2` (`pat_id`, `hos_name`, `symptom`, `dur_in_hos`, `T`) VALUES
-(1, 'Little Rabbit Hospital', 'Numbness or tingling in hands', NULL, 0),
-(2, 'Little Rabbit Hospital', 'Sore throat', NULL, 0),
-(3, 'Little Rabbit Hospital', 'Urinary problems', 7, 1),
-(4, 'Little Rabbit Hospital', 'Constipation', 3, 1),
-(5, 'Little Rabbit Hospital', 'Decreased hearing', NULL, 0),
-(6, 'Little Rabbit Hospital', 'Headaches', NULL, 0),
-(7, 'Little Rabbit Hospital', 'Nausea or vomiting', 4, 1),
-(8, 'Little Rabbit Hospital', 'Sore throat', NULL, 0),
-(9, 'Little Rabbit Hospital', 'Nasal congestion', 21, 1),
-(10, 'Little Rabbit Hospital', 'Foot swelling or leg swelling', 17, 1);
+INSERT INTO `patient_1` (`pat_id`, `visit_date`, `age`, `pat_name`, `gender`, `address`, `symptom`) VALUES
+(1, '2005-07-02', 80, 'Ronnie Adamsen', 'Male', '78 Ronald Regan Alley', 'Numbness or tingling in hands'),
+(2, '1998-07-03', 22, 'Marlyn Bloys', 'Male', '43381 Meadow Vale Center', 'Sore throat'),
+(3, '2008-02-11', 51, 'Darell Cabell', 'Female', '947 Springs Plaza', 'Urinary problems'),
+(4, '2014-04-06', 18, 'Cornie Brewood', 'Male', '31314 Basil Lane', 'Constipation'),
+(5, '2012-11-26', 27, 'Barth Gullifant', 'Male', '63257 Sunbrook Crossing', 'Decreased hearing'),
+(6, '2004-06-16', 39, 'Xerxes Vettore', 'Female', '400 Granby Plaza', 'Headaches'),
+(7, '2015-04-03', 77, 'Justus Isacoff', 'Male', '38069 Cottonwood Street', 'Nausea or vomiting'),
+(8, '2007-01-14', 48, 'Lu Polotti', 'Female', '43170 Arrowood Parkway', 'Sore throat'),
+(9, '1998-02-19', 31, 'Steffen Beat', 'Female', '2 Mifflin Court', 'Nasal congestion'),
+(10, '2014-09-22', 47, 'Nickie Yakunikov', 'Male', '529 Meadow Vale Drive', 'Foot swelling or leg swelling'),
+(11, '2016-08-04', 32, 'Darren Chicken', 'Male', '542 Mingzhe Street', 'Cough'),
+(12, '2018-04-02', 24, 'Cider Wong', 'Female', '412 Octagon Street', 'Sleepy');
 
 -- --------------------------------------------------------
 
@@ -185,7 +208,7 @@ INSERT INTO `patient_2` (`pat_id`, `hos_name`, `symptom`, `dur_in_hos`, `T`) VAL
 
 CREATE TABLE `pat_doc_1` (
   `pat_id` int(11) NOT NULL,
-  `doc_id` int(11) NOT NULL,
+  `doc_id` int(11) NOT NULL DEFAULT '0',
   `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -200,10 +223,14 @@ INSERT INTO `pat_doc_1` (`pat_id`, `doc_id`, `date`) VALUES
 (4, 4, '2014-04-09'),
 (5, 1, '2012-11-29'),
 (6, 3, '2004-06-19'),
-(7, 4, '2015-04-06'),
+(7, 4, '2015-04-15'),
 (8, 2, '2007-01-17'),
 (9, 3, '1998-02-22'),
-(10, 5, '2014-09-25');
+(10, 1, '2017-07-12'),
+(10, 2, '2017-03-27'),
+(10, 3, '2017-06-16'),
+(10, 4, '2017-05-24'),
+(10, 5, '2017-06-15');
 
 -- --------------------------------------------------------
 
@@ -230,10 +257,14 @@ INSERT INTO `pat_doc_2` (`pat_id`, `doc_id`, `if_surge`, `disease`, `treatment`)
 (4, 4, 0, 'Depression', 'Behavioral Therapy'),
 (5, 1, 1, 'Seizure Disorder', 'Occupational Therapy'),
 (6, 3, 0, 'Deafness', 'Drug Therapy'),
-(7, 4, 0, 'Congenital Heart Defects', 'Physical Therapy'),
+(7, 4, 0, 'Heart Disease', 'Physical Therapy'),
 (8, 2, 1, 'Cancer', 'Physical Therapy'),
 (9, 3, 0, 'Birth Defects', 'Drug Therapy'),
-(10, 5, 0, 'Salmonella', 'Occupational Therapy');
+(10, 1, 1, 'Lung Cancer', 'Physical Therapy'),
+(10, 2, 0, 'Asthma', 'Drug Therapy'),
+(10, 3, 1, 'Lung Cancer', 'Physical Therapy'),
+(10, 4, 1, 'Cystic Fibrosis', 'Occupational Therapy'),
+(10, 5, 1, 'Lung Cancer', 'Drug Therapy');
 
 --
 -- Indexes for dumped tables
@@ -244,7 +275,7 @@ INSERT INTO `pat_doc_2` (`pat_id`, `doc_id`, `if_surge`, `disease`, `treatment`)
 --
 ALTER TABLE `department`
   ADD PRIMARY KEY (`dep_name`),
-  ADD KEY `hos_name` (`hos_name`);
+  ADD KEY `department_ibfk_1` (`hos_name`);
 
 --
 -- Indexes for table `doctor`
@@ -257,7 +288,7 @@ ALTER TABLE `doctor`
 --
 ALTER TABLE `doc_dep`
   ADD PRIMARY KEY (`doc_id`,`dep_name`),
-  ADD KEY `dep_name` (`dep_name`);
+  ADD KEY `doc_dep_ibfk_2` (`dep_name`);
 
 --
 -- Indexes for table `hospital`
@@ -266,21 +297,25 @@ ALTER TABLE `hospital`
   ADD PRIMARY KEY (`hos_name`);
 
 --
+-- Indexes for table `inpatient`
+--
+ALTER TABLE `inpatient`
+  ADD PRIMARY KEY (`pat_id`),
+  ADD KEY `inpatient_ibfk_1` (`hos_name`);
+
+--
+-- Indexes for table `outpatient`
+--
+ALTER TABLE `outpatient`
+  ADD PRIMARY KEY (`pat_id`),
+  ADD KEY `hos_name` (`hos_name`);
+
+--
 -- Indexes for table `patient_1`
 --
 ALTER TABLE `patient_1`
   ADD PRIMARY KEY (`pat_id`),
-  ADD KEY `hos_name` (`hos_name`),
-  ADD KEY `hos_name_2` (`hos_name`),
-  ADD KEY `pat_id` (`pat_id`),
-  ADD KEY `hos_name_3` (`hos_name`);
-
---
--- Indexes for table `patient_2`
---
-ALTER TABLE `patient_2`
-  ADD PRIMARY KEY (`pat_id`),
-  ADD KEY `hos_name` (`hos_name`);
+  ADD KEY `pat_id` (`pat_id`);
 
 --
 -- Indexes for table `pat_doc_1`
@@ -306,30 +341,10 @@ ALTER TABLE `pat_doc_2`
 ALTER TABLE `doctor`
   MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `doc_dep`
---
-ALTER TABLE `doc_dep`
-  MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
 -- AUTO_INCREMENT for table `patient_1`
 --
 ALTER TABLE `patient_1`
-  MODIFY `pat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `patient_2`
---
-ALTER TABLE `patient_2`
   MODIFY `pat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `pat_doc_1`
---
-ALTER TABLE `pat_doc_1`
-  MODIFY `pat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `pat_doc_2`
---
-ALTER TABLE `pat_doc_2`
-  MODIFY `pat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
@@ -338,41 +353,42 @@ ALTER TABLE `pat_doc_2`
 -- Constraints for table `department`
 --
 ALTER TABLE `department`
-  ADD CONSTRAINT `department_ibfk_1` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `department_ibfk_1` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `doc_dep`
 --
 ALTER TABLE `doc_dep`
-  ADD CONSTRAINT `doc_dep_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `doc_dep_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `doc_dep_ibfk_2` FOREIGN KEY (`dep_name`) REFERENCES `department` (`dep_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `patient_1`
+-- Constraints for table `inpatient`
 --
-ALTER TABLE `patient_1`
-  ADD CONSTRAINT `patient_1_ibfk_1` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `inpatient`
+  ADD CONSTRAINT `inpatient_ibfk_1` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `inpatient_ibfk_2` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `patient_2`
+-- Constraints for table `outpatient`
 --
-ALTER TABLE `patient_2`
-  ADD CONSTRAINT `patient_2_ibfk_1` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `outpatient`
+  ADD CONSTRAINT `outpatient_ibfk_1` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`),
+  ADD CONSTRAINT `outpatient_ibfk_2` FOREIGN KEY (`hos_name`) REFERENCES `hospital` (`hos_name`);
 
 --
 -- Constraints for table `pat_doc_1`
 --
 ALTER TABLE `pat_doc_1`
-  ADD CONSTRAINT `pat_doc_1_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `pat_doc_1_ibfk_2` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `pat_doc_1_ibfk_3` FOREIGN KEY (`pat_id`) REFERENCES `patient_2` (`pat_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `pat_doc_1_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pat_doc_1_ibfk_2` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pat_doc_2`
 --
 ALTER TABLE `pat_doc_2`
-  ADD CONSTRAINT `pat_doc_2_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `pat_doc_2_ibfk_3` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `pat_doc_2_ibfk_4` FOREIGN KEY (`pat_id`) REFERENCES `patient_2` (`pat_id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `pat_doc_2_ibfk_1` FOREIGN KEY (`doc_id`) REFERENCES `doctor` (`doc_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pat_doc_2_ibfk_2` FOREIGN KEY (`pat_id`) REFERENCES `patient_1` (`pat_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
