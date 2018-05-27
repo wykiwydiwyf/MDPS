@@ -62,7 +62,7 @@ select#form3 {
       <label for="form1">Patient ID</label>
       <select class="custom-select" name="pat_id" id="form1">
         <?php
-$query = "SELECT p.pat_id
+$query = "SELECT distinct p.pat_id
 from doctor as d, pat_doc_1 as pd1 ,patient_1 as p
 where d.doc_id = pd1.doc_id and p.pat_id = pd1.pat_id 
 order by p.pat_id
