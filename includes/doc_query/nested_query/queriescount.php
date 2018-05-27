@@ -135,7 +135,7 @@ $result = mysqli_query($conn, $query);
 
       </select>
     </div>
-      <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+      <input type="submit" name="form1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
       </form>
       </div>
       <div class="btn-group " role="group" aria-label="First group">
