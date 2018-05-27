@@ -82,12 +82,12 @@
     <h5 id="query1"><div>Maximum Number of Patient Diagnosed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the maximum number of patients doctor diognised</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesmax.php';"/>
+    <input type="button" name="query2" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesmax.php';"/>
     </form>
     <h5 id="query1"><div>Average Number of Patient Diagnosed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Find the average number of patients doctor diognised</p>
     <form action="" method="post">
-    <input type="button" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
+    <input type="button" name="query3" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" onclick="location.href='queriesave.php';"/>
     </form>
 
     <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
@@ -95,7 +95,7 @@
     <div class="row justify-content-md-center">
 
     <div class="col col-lg-auto">
-    <form action="queriesmin.php" method="post">
+    <form action="queriescount.php" method="post">
     <div class="form-group">
     <label for="form2">Doctor ID</label>
     <select class="custom-select" name="doc_id" id="form1">
@@ -116,7 +116,7 @@
 
     </select>
     </div>
-      <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+      <input type="submit" name="query4" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
       </form>
       </div>
       <div class="btn-group " role="group" aria-label="First group">
