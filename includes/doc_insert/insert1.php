@@ -109,7 +109,7 @@ $result = mysqli_query($conn, $query);
     </div>
     
     <div class="form-group">
-    <label for="table1">Diagnosis Date</label>
+    <label for="table1">Treatment Date</label>
     <table border="0" cellspacing="0" id="table1">
 
     <tr><td  align=left  >   
