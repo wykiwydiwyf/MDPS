@@ -139,29 +139,29 @@ table#t01 tr:nth-child(odd) {
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
     <div class="row justify-content-md-center">
 
-      <div class="col col-lg-auto">
-      <form action="" method="post">
-      <div class="form-group">
-      <label for="form2">Doctor ID</label>
-      <select class="custom-select" name="doc_id" id="form1">
-        <?php
-$query = "SELECT *
-from doctor
-";
+    <div class="col col-lg-auto">
+    <form action="queriescount.php" method="post">
+    <div class="form-group">
+    <label for="form2">Doctor ID</label>
+    <select class="custom-select" name="doc_id" id="form1">
+      <?php
+    $query = "SELECT *
+    from doctor
+    ";
 
-$result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $query);
 
-            ?>
-        <option selected="">Choose...</option>
-        <?php 
-          while ($row = mysqli_fetch_array($result)) {
-          echo "<option value=".$row["doc_id"].">".$row["doc_id"]."</option>";
-          }
-           ?>
+          ?>
+      <option selected="">Choose...</option>
+      <?php 
+        while ($row = mysqli_fetch_array($result)) {
+        echo "<option value=".$row["doc_id"].">".$row["doc_id"]."</option>";
+       }
+         ?>
 
-      </select>
+    </select>
     </div>
-      <input type="submit" name="form1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
+      <input type="submit" name="query4" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
     </form>
     </div>
   </div>
