@@ -93,9 +93,29 @@
     <h5 id="query1"><div>Number of Patient Certain Doctor Has<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h5>
     <p class="card-text">Given the doctor's ID, find the number of patients that diagnosed by that certain doctor</p>
     <div class="row justify-content-md-center">
+
     <div class="col col-lg-auto">
-      <form action="queriescount.php" method="post">
-      <input type="text" class="form-control" placeholder="Input doctor ID here" id="form1" name="doc_id" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+    <form action="queriesmin.php" method="post">
+    <div class="form-group">
+    <label for="form2">Doctor ID</label>
+    <select class="custom-select" name="doc_id" id="form1">
+      <?php
+    $query = "SELECT *
+    from doctor
+    ";
+
+    $result = mysqli_query($conn, $query);
+
+          ?>
+      <option selected="">Choose...</option>
+      <?php 
+        while ($row = mysqli_fetch_array($result)) {
+        echo "<option value=".$row["doc_id"].">".$row["doc_id"]."</option>";
+       }
+         ?>
+
+    </select>
+    </div>
       <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
       </form>
       </div>
