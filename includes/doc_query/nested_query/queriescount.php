@@ -115,7 +115,26 @@ table#t01 tr:nth-child(odd) {
 
       <div class="col col-lg-auto">
       <form action="" method="post">
-      <input type="text" class="form-control" placeholder="Input doctor ID here" id="form1" name="doc_id" aria-label="Input id" aria-describedby="btnGroupAddon" style="padding-left: 0.375em;">
+      <div class="form-group">
+      <label for="form2">Doctor ID</label>
+      <select class="custom-select" name="doc_id" id="form1">
+        <?php
+$query = "SELECT *
+from doctor
+";
+
+$result = mysqli_query($conn, $query);
+
+            ?>
+        <option selected="">Choose...</option>
+        <?php 
+          while ($row = mysqli_fetch_array($result)) {
+          echo "<option value=".$row["doc_id"].">".$row["doc_id"]."</option>";
+          }
+           ?>
+
+      </select>
+    </div>
       <input type="submit" name="query1" class="btn btn-primary" value="Run Query" style="text-align:right;margin:10px" />
       </form>
       </div>

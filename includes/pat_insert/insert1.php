@@ -197,6 +197,8 @@ if (mysqli_multi_query($conn,$sql))
       while ($row=mysqli_fetch_row($result))
         {
         printf("%s\n",$row[0]);
+        //let them know the person has been added. 
+        echo "The New Patient Information is Added!";
         }
       // Free result set
       mysqli_free_result($result);
@@ -205,8 +207,7 @@ if (mysqli_multi_query($conn,$sql))
   while (mysqli_next_result($conn));
 }
 
-//let them know the person has been added. 
-echo "The New Patient Information is Added!";
+
 ?>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
