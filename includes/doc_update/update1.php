@@ -137,13 +137,11 @@ $result = mysqli_query($conn, $query);
 $doc_id=$_POST['doc_id'];
 $pat_id=$_POST['pat_id'];
 $todo=$_POST['todo'];
-$month=$_POST['month'];
 $dt=$_POST['dt'];
-$year=$_POST['year'];
 $if_surge=$_POST['if_surge'];
 $disease=$_POST['disease'];
 $treatment=$_POST['treatment'];
-$date="$year-$month-$dt";
+$date=$_POST['date'];
 
 
 
